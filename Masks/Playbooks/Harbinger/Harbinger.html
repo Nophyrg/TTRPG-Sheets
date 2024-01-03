@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Harbinger</title>
+	<meta name="description" content="Masks RPG Responsive Character Sheet">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="../../index_files/morb.jpg">
+	<link rel="stylesheet" href="../../../css/has-float-label.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../../../css/masks-sheet.css">
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header>
+		<h1>Masks RPG Playbook - Harbinger</h1>
+		<a href="../../index.html" style="text-align: center;">Home</a>
+		<a href="HarbingerDesc.html">Description</a>
+	</header>
+	<form id="charSheet">
+		<img src="../../Images/portrait-harbinger.jpg" id="charImage"><br>
+		You're from the future, and you know how things turn out. You came back with a mission - to make sure that history changes for the better. <br>
+		But things are scrambled. Your memories, not quite right. You're not sure how this present becomes your future. So until you can figure it out, you might as well do what good you can, where you can, all the while trying to connect the dots between your world and this one.
+		<div style="white-space: nowrap;">
+			<label class="has-float-label">
+			<input type="text" name="charName" id="charName" placeholder="Hero Name">
+			<span>Hero Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="text" name="realName" id="realName" placeholder="Real Name">
+			<span>Real Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" 
+			value="https://nophyrg.github.io/Masks/Images/portrait-harbinger.jpg" 
+			data-original-value="https://nophyrg.github.io/Masks/Images/portrait-harbinger.jpg">
+			<span>Portrait URI</span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Look</h2>
+			<input type="text" name="genders" list="genders" placeholder="Gender">
+			<input type="text" name="race" list="races" placeholder="Race"> 
+			<input type="text" name="face" list="faces" placeholder="Face"> 
+			<input type="text" name="clothing" list="clothing" placeholder="Clothing"> 
+			<input type="text" name="costume" list="costumes" placeholder="Costumes">
+			<datalist id="genders">
+				<option value="ambiguous"></option>
+				<option value="man"></option>
+				<option value="shifting"></option>
+				<option value="transgressing"></option>
+				<option value="woman"></option>
+			</datalist>
+			<datalist id="races">
+				<option value="Asian or South Asian">
+				</option><option value="Black">
+				</option><option value="Hispanic/Latino">
+				</option><option value="Indigenous">
+				</option><option value="Middle Eastern">
+				</option><option value="White"></option>
+			</datalist>
+			<datalist id="faces">
+				<option value="haunted face">
+				</option><option value="optimistic face">
+				</option><option value="ordinary face">
+				</option><option value="“hyper-evolved human” face"></option>
+			</datalist>
+			<datalist id="clothing">
+				<option value="streamlined clothing"></option>
+				<option value="“fashion-forward” clothing"></option>
+				<option value="simple clothing"></option>
+				<option value="casual clothing"></option>
+			</datalist>
+			<datalist id="costumes">
+				<option value="high-tech costume"></option>
+				<option value="impossible costume"></option>
+				<option value="sleek costume"></option>
+				<option value="dramatic costume"></option>
+			</datalist>
+			<label class="has-float-label">
+				<textarea rows="2" name="lookDesc" id="lookDesc" placeholder="Describe Your Look" class="description"></textarea>
+				<span>Describe your look: </span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Abilities</h2>
+			<p>You’re from the future, and that has its benefits, like future knowledge (even though your memories are scrambled). 
+				Plus, your powers may have had something to do with how you got back to the past—er, the present day, that is. 
+				“Now,” as the locals call it. Choose one option from the list below.</p>
+			<div class="abilities">
+				<span class="nowrap"><input type="checkbox" name="abilityOne" id="abilityOne" value="super speed"><label for="abilityOne"> super speed</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityTwo" id="abilityTwo" value="telepathy & telekinesis"><label for="abilityTwo"> telepathy & telekinesis</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityThree" id="abilityThree" value="futuristic gadgets & implants"><label for="abilityThree"> futuristic gadgets & implants</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityfour" id="abilityFour" value="optimized biology"><label for="abilityFour"> optimized biology</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityFive" id="abilityFive" value="teleportation & portals"><label for="abilityFive"> teleportation & portals</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilitySix" id="abilitySix" value="energy absorption/redirection"><label for="abilitySix"> energy absorption/redirection</label></span>
+			</div>
+			<label class="has-float-label">
+				<textarea rows="2" name="abilityStyle" id="abilityStyle" placeholder="Describe how your abilities appear" class="description"></textarea>
+				<span>Describe how your abilities appear: </span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Labels</h2>
+			<p>(at character creation, add +1 wherever you choose)</p>
+			<div class="labels" style="max-width: 15em;">
+				<p>Danger <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charDanger" min="-2" max="3" value="0" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Freak <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charFreak" min="-2" max="3" value="0" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Savior <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charSavior" min="-2" max="3" value="2" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Superior <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charSuperior" min="-2" max="3" value="1" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Mundane <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charMundane" min="-2" max="3" value="-1" class="alignRight" style="margin-right: 1em;"></p>
+			</div>
+		</div>
+
+		<div class="conditions">
+			<h2 style="margin-bottom: 15px;">Conditions</h2>
+			<input type="checkbox" name="conAfraid" id="conAfraid" value="Afraid"><label for="conAfraid"> Afraid</label> (-2 to directly engage a threat)<br>
+			<input type="checkbox" name="conAngry" id="conAngry" value="Angry"><label for="conAngry"> Angry</label> (-2 to comfort or support or pierce the mask) <br>
+			<input type="checkbox" name="conGuilty" id="conGuilty" value="Guilty"><label for="conGuilty"> Guilty</label> (-2 to provoke someone or assess the situation)<br> 
+			<input type="checkbox" name="conHopeless" id="conHopeless" value="Hopeless"><label for="conHopeless"> Hopeless</label> (-2 to unleash your powers)<br> 
+			<input type="checkbox" name="conInsecure" id="conInsecure" value="Insecure"><label for="conInsecure"> Insecure</label> (-2 to defend someone or reject others’ influence)<br> 
+		</div>
+		
+		<div class="backstory">
+			<h2>Backstory</h2>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryOne" placeholder="How did you travel from the future to the present day?" style="height: 50px;"></textarea>
+			<span>How did you travel from the future to the present day?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryTwo" placeholder="What keeps you from returning to the future?" style="height: 50px;"></textarea>
+			<span>What keeps you from returning to the future?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryThree" placeholder="Why are your memories and knowledge of the future scrambled?" style="height: 50px;"></textarea>
+			<span>Why are your memories and knowledge of the future scrambled?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFour" placeholder="What is the most important part of your future that you want to avert?" style="height: 50px;"></textarea>
+			<span>What is the most important part of your future that you want to avert?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFive" placeholder="Why must you join this team specifically to achieve your mission’s goals?" style="height: 50px;"></textarea>
+			<span>Why must you join this team specifically to achieve your mission’s goals?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryAdd" placeholder="Additional Backstory Notes" style="height: 50px;"></textarea>
+			<span>Additional Backstory Notes</span>
+			</label>
+			<p>Once you’ve finished your backstory, introduce your character to the other players, and then determine what happened when your team first came together, the relationships between you and your teammates, and who has Influence over you.</p>
+		</div>
+		
+		<div>
+			<h2>When our team first came together...</h2>
+			<p>We averted a disaster from the future’s history books. </p>
+			<label class="has-float-label">
+				<textarea rows="1" name="firstTogether" placeholder="What was the disaster? What effect do we hope it had on the timeline?" style="height: 50px;"></textarea>
+				<span>What was the disaster? What effect do we hope it had on the timeline?</span>
+			</label>
+		</div>
+
+		<h2>Relationships</h2>
+			<textarea rows="1" name="relationshipOne" class="inline" style="height: 2px;"></textarea> turns away from the hero’s path, according to your history books. You have to prevent that from happening.<br>
+			You’ve always idolized <textarea rows="1" name="relationshipTwo" class="inline" style="height: 2px;"></textarea> but it’s too awkward to admit it to them now that you’ve met them in real life. Keep it cool, keep it cool.<br>
+		
+		<div>
+			<h2>Influence</h2>
+			<p>Every member of your team has the power to change the future—your future. Give everyone influence over you.</p>
+			<label class="has-float-label">
+				<textarea rows="1" name="influenceOver" placeholder="Who has influence over you" style="height: 50px;"></textarea>
+				<span>Who has influence over you</span>
+			</label>
+			<label class="has-float-label">
+				<textarea rows="1" name="influenceOf" placeholder="I have influence over..." style="height: 50px;"></textarea>
+				<span>I have influence over...</span>
+			</label>
+		</div>
+
+		<div class="moves">
+			<h2>Harbinger Moves</h2>
+			<p>(Choose two)</p>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" value="Stick to the mission">
+				<label for="moveOne"> Stick to the mission:</label> 
+				When you <b>defend someone</b> or something critically important to the future (tell us why), 
+				you may mark a condition to shift down one Label and shift up Savior before the roll. 
+				If you do, you cannot choose the option 'clear a condition' for the <b>defend</b> move.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveTwo" id="moveTwo" value="Tomorrow's golden promise">
+				<label for="moveTwo"> Tomorrow's golden promise:</label> 
+				When you <b>comfort or support someone</b> with tales of what you think their future will be, 
+				you may roll + Savior instead of + Mundane. Mark a condition unless you are confident the stories are true.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveThree" id="moveThree" value="Applied History">
+				<label for="moveThree"> Applied History:</label> 
+				When you <b>pierce the mask</b> of someone you believe will shape the future, roll + Savior instead of + Mundane.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFour" id="moveFour" value="You haven't learned you can do that yet">
+				<label for="moveFour"> You haven't learned you can do that yet:</label> 
+				When you tell a teammate about a new, never-before-performed trick that they've never considered, 
+				spend a Team from the pool to allow them to <b>unleash their powers</b>, <b>directly engage a threat</b>, 
+				or <b>defend someone</b> using your Superior as if it was their Label. 
+				Any costs or complications from their move affect you, as well.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFive" id="moveFive" value="I learned the solution in grade school">
+				<label for="moveFive"> I learned the solution in grade school:</label> 
+				When you <b>unleas your powers</b> to extend your senses or overcome an intellectual obstacle, you may roll + Superior instead of + Freak.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="21st century studies">
+				<label for="moveSix"> 21st century studies:</label> 
+				When you <b>assess the situation</b>, you may always ask "what does the future know about this moment?", even on a miss. You take +1 ongoing to act on the answers.
+			</div>
+		</div>
+		
+		<h2>Connecting the Dots</h2>
+		<p>You’re from the future, but your knowledge of the past is spotty, intermittent, confused, jumbled. You’re doing your best to put together the clues and your broken memories, though, so you can figure out how this world and its people become the ones you know.</p>
+		<p><b>When you push yourself to remember the version of someone that exists in your future</b>, mark a condition and roll + Memories. 
+		On a hit, you connect who they are now to who they are in the future; choose the role that they fulfill in the future, 
+		and the GM will tell you about their future self. On a 10+, ask a follow-up question. On a miss, they’re not at all who you thought they would be; 
+		the GM will choose their role, or tell you that as far as you know, they don’t exist in the future.</p>
+		<div style="max-width: 20em;">
+			<label style="float: left; margin-right: 1em;">Monster: </label><span style="display: block; overflow: hidden;"><input type="text" name="monster" style="width: 100%;"></span>
+			<label style="float: left; margin-right: 1em;">Traitor: </label><span style="display: block; overflow: hidden;"><input type="text" name="traitor" style="width: 100%;"></span>
+			<label style="float: left; margin-right: 1em;">Corruptor: </label><span style="display: block; overflow: hidden;"><input type="text" name="corruptor" style="width: 100%;"></span>
+			<label style="float: left; margin-right: 1em;">Martyr: </label><span style="display: block; overflow: hidden;"><input type="text" name="martyr" style="width: 100%;"></span>
+			<label style="float: left; margin-right: 1em;">Architect: </label><span style="display: block; overflow: hidden;"><input type="text" name="architect" style="width: 100%;"></span>
+			<label style="float: left; margin-right: 1em;">Leader: </label><span style="display: block; overflow: hidden;"><input type="text" name="leader" style="width: 100%;"></span>
+		</div>
+		<p>Your Memories score starts at -1, and goes up by 1 (to a maximum of +3) for each name above.</p>
+		<div class="labels" style="max-width: 10em;">
+		<p>Memories <input type="number" name="memories" min="-1" max="3" value="-1" class="alignRight"></p>
+		</div>
+		<p><b>When you write a name above</b>, they gain Influence over you if they did not already have it.</p>
+		<p><b>At the start of each session or when time passes</b>, roll + Savior to find out how your investigations into the timeline have been going. 
+		On a hit, choose one figure noted above or one aspect of the future world you can remember. 
+		You’ve found a lead to follow to learn more about how the present version of that figure or aspect became the future version. 
+		On a 10+, the lead is particularly strong; right now, you can ask the GM one question about the figure or aspect, and they will answer honestly. 
+		On a miss, you’re lost in the present; the GM will tell you how things are so different here, and shift your Labels according to how it makes you feel.</p>
+		
+
+		<div>
+			<h2>Moment of Truth</h2>
+			<p>Everything you do could affect the future. For all you know, saving that one guy means that now the future is full of pterodactyls. The ripples are always so hard to track, and you’re not sure if you’ve helped or hurt—not really. Until now. In this moment, it’s all clear. You can see the course of events laid out before you like a river, and you know exactly what you have to do to ensure the future outcome you want. Of course, after this, you’ve changed enough of the timeline to invalidate your prior research—reset all the names in your “Connecting the dots” section.</p>
+			<label for="truthUnlockOne"> Unlock 1:</label> <input type="checkbox" name="truthUnlockOne" id="truthUnlockOne"><label for="truthUsedOne"> Use 1:</label> <input type="checkbox" name="truthUsedOne" id="truthUsedOne">
+			<label for="truthUnlockTwo"> Unlock 2:</label> <input type="checkbox" name="truthUnlockTwo" id="truthUnlockTwo"><label for="truthUsedTwo"> Use 2:</label> <input type="checkbox" name="truthUsedTwo" id="truthUsedTwo">
+		</div>
+
+		<div>
+			<h2>Team Moves</h2>
+			<p>When you <b>confess to a teammate the difference between what you thought they would be and what they really are</b>, add a Team to the pool, and ask them if you represent a future they’d want. If they say yes, mark potential. If they say no, mark a condition.</p>
+			<p>When you <b>share a tale of future loss with someone</b>, ask them if they think you have the ability to avert that loss. If they believe you do, mark potential and give them Influence over you. If they don’t, mark Guilty and shift one Label up and one Label down (your choice). If Guilty is already marked mark another condition, GM’s choice.</p>
+		</div>
+
+		<div>
+			<h2>Potential</h2>
+			<div>
+				<input type="checkbox" name="potentialOne" id="potentialOne">
+				<input type="checkbox" name="potentialTwo" id="potentialTwo">
+				<input type="checkbox" name="potentialThree" id="potentialThree">
+				<input type="checkbox" name="potentialFour" id="potentialFour">
+				<input type="checkbox" name="potentialFive" id="potentialFive"> 
+			</div>
+		</div>
+
+		<div>
+			<h2>Advancement</h2>
+			<p>When you fill your potential track, you advance. Choose from the list below.</p>
+			<input type="checkbox" name="advanceOne" id="advanceOne"> Take another move from your playbook<br>
+			<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another move from your playbook<br>
+			<input type="checkbox" name="advanceThree" id="advanceThree"> Take a move from another playbook<br>
+			<input type="checkbox" name="advanceFour" id="advanceFour"> Take a move from another playbook<br>
+			<input type="checkbox" name="advanceFive" id="advanceFive"> Rearrange your Labels as you choose, and add +1 to a Label<br>
+			<input type="checkbox" name="advanceSix" id="advanceSix"> Unlock your Moment of Truth<br>
+			<input type="checkbox" name="advanceSeven" id="advanceSeven"> Someone permanently loses Influence over you; add +1 to a Label<br>
+			<input type="checkbox" name="advanceEight" id="advanceEight"> Rearrange your Labels as you choose, and add +1 to a Label<br>
+			<p>When you’ve taken five advances from the top list, you can take advances from the list below.</p>
+			<input type="checkbox" name="advanceNine" id="advanceNine"> Unlock your Moment of Truth after it’s been used once<br>
+			<input type="checkbox" name="advanceTen" id="advanceTen"> Change playbooks<br>
+			<input type="checkbox" name="advanceEleven" id="advanceEleven"> Take an adult move<br>
+			<input type="checkbox" name="advanceTwelve" id="advanceTwelve"> Take an adult move<br>
+			<input type="checkbox" name="advanceThirteen" id="advanceThirteen"> Lock a Label, and add +1 to a Label of your choice<br>
+			<input type="checkbox" name="advanceFourteen" id="advanceFourteen"> Return to the future and accept its new form, or jump to a different point in the past to begin your mission anew<br>
+		</div>
+
+		<h2>Other Moves</h2>
+			<textarea rows="8" name="otherMoves" style="width: 100%; height: 153px;"></textarea>
+	</form>
+</body>
+</html>

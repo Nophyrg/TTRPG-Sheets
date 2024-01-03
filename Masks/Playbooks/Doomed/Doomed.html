@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Masks RPG Character Sheet - Doomed v1.1 | Adventure For Hire</title>
+	<meta name="description" content="Masks RPG Responsive Playbook">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="../../index_files/morb.jpg">
+	<link rel="stylesheet" href="../../../css/has-float-label.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../../../css/masks-sheet.css">
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header>
+		<h1>Doomed</h1>
+		<a href="../../index.html" style="text-align: center;">Home</a>
+		<a href="DoomedDesc.html">Description</a>
+	</header>
+	<form id="charSheet">
+		<img src="./Doomed_files/portrait-doomed.jpg" id="charImage"><br>
+		Something about your powers dooms you. It's just a matter of time before your doom comes for you. Until then, though... you've got a nemesis who needs fighting and a world that needs saving. After all, it's better to burnout than fade away...
+		<div style="white-space: nowrap;">
+			<label class="has-float-label">
+			<input type="text" name="charName" id="charName" placeholder="Hero Name">
+			<span>Hero Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="text" name="realName" id="realName" placeholder="Real Name">
+			<span>Real Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" 
+			value="https://nophyrg.github.io/Masks/Images/portrait-doomed.jpg" 
+			data-original-value="https://nophyrg.github.io/Masks/Images/portrait-doomed.jpg">
+			<span>Portrait URI</span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Look</h2>
+			<input type="text" name="genders" list="genders" placeholder="Gender"> 
+			<input type="text" name="race" list="races" placeholder="Race"> 
+			<input type="text" name="charEye" list="charEyes" placeholder="Eye"> 
+			<input type="text" name="clothing" list="clothing" placeholder="Clothing"> 
+			<input type="text" name="costume" list="costumes" placeholder="Costume">
+			<datalist id="genders">
+				<option value="ambiguous">
+				</option><option value="man">
+				</option><option value="shifting">
+				</option><option value="transgressing">
+				</option><option value="woman">
+			</option></datalist>
+			<datalist id="races">
+				<option value="Asian or South Asian">
+				</option><option value="Black">
+				</option><option value="Hispanic/Latino">
+				</option><option value="Indigenous">
+				</option><option value="Middle Eastern">
+				</option><option value="White">
+			</option></datalist>
+			<datalist id="charEyes">
+				<option value="haunted eyes">
+				</option><option value="angry eyes">
+				</option><option value="empty eyes">
+				</option><option value="steely eyes">
+			</option></datalist>
+			<datalist id="clothing">
+				<option value="casual clothing">
+				</option><option value="ragged clothing">
+				</option><option value="rebellious clothing">
+				</option><option value="garish clothing">
+			</option></datalist>
+			<datalist id="costumes">
+				<option value="skimpy costume">
+				</option><option value="showy costume">
+				</option><option value="ridiculous costume">
+				</option><option value="cheap costume">
+				</option><option value="no costume">
+			</option></datalist>
+			<label class="has-float-label">
+				<textarea rows="2" name="lookDesc" id="lookDesc" placeholder="Describe Your Look" class="description"></textarea>
+				<span>Describe your look: </span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Abilities</h2>
+			<p>Your powers are tied into your doom; think about the nature of your doom when you choose them. Choose up to three.</p>
+			<div class="abilities">
+				<span class="nowrap"><input type="checkbox" name="abilityOne" id="abilityOne" value="telekinesis"><label for="abilityOne"> telekinesis</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityTwo" id="abilityTwo" value="body transmutation"><label for="abilityTwo"> body transmutation</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityThree" id="abilityThree" value="memory manipulation"><label for="abilityThree"> memory manipulation</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityfour" id="abilityFour" value="superhuman strength and speed"><label for="abilityFour"> superhuman strength and speed</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityFive" id="abilityFive" value="psychic constructs"><label for="abilityFive"> psychic constructs</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilitySix" id="abilitySix" value="vitality absorption"><label for="abilitySix"> vitality absorption</label></span>
+			</div>
+			<label class="has-float-label">
+				<textarea rows="2" name="abilityStyle" id="abilityStyle" placeholder="Describe how your abilities appear" class="description"></textarea>
+				<span>Describe how your abilities appear: </span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Nemesis</h2>
+			<p>You have a nemesis, an epic and powerful enemy representing and embodying your doom. It’s going to take everything you have to take them down in the time you have left.</p>
+			<label class="has-float-label">
+				<textarea rows="1" name="charNemesis" id="charNemesis" placeholder="Who is your nemesis?" style="height: 46px;"></textarea>
+				<span>Who is your nemesis?</span>
+			</label>
+			<p>At the end of every session, answer the question: Did you make progress on defeating your nemesis? If the answer is yes, mark potential. If the answer is no, mark your doom track.</p>
+		</div>
+
+		<div>
+			<h2>Labels</h2>
+			<p>(at character creation, add +1 wherever you choose)</p>
+			<div class="labels" style="max-width: 15em;">
+				<p>Danger <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charDanger" min="-2" max="3" value="1" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Freak <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charFreak" min="-2" max="3" value="1" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Savior <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charSavior" min="-2" max="3" value="1" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Superior <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charSuperior" min="-2" max="3" value="-1" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Mundane <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charMundane" min="-2" max="3" value="0" class="alignRight" style="margin-right: 1em;"></p>
+			</div>
+		</div>
+		
+		<div class="conditions">
+			<h2>Conditions</h2>
+			<input type="checkbox" name="conAfraid" id="conAfraid" value="Afraid"><label for="conAfraid"> Afraid</label> (-2 to directly engage a threat)<br>
+			<input type="checkbox" name="conAngry" id="conAngry" value="Angry"><label for="conAngry"> Angry</label> (-2 to comfort or support or pierce the mask) <br>
+			<input type="checkbox" name="conGuilty" id="conGuilty" value="Guilty"><label for="conGuilty"> Guilty</label> (-2 to provoke someone or assess the situation)<br> 
+			<input type="checkbox" name="conHopeless" id="conHopeless" value="Hopeless"><label for="conHopeless"> Hopeless</label> (-2 to unleash your powers)<br> 
+			<input type="checkbox" name="conInsecure" id="conInsecure" value="Insecure"><label for="conInsecure"> Insecure</label> (-2 to defend someone or reject others’ influence)<br> 
+		</div>
+
+		<div class="backstory">
+			<h2>Backstory</h2>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryOne" placeholder="When did you first learn of your doom?" style="height: 46px;"></textarea>
+			<span>When did you first learn of your doom?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryTwo" placeholder="Where did you get your sanctuary?" style="height: 46px;"></textarea>
+			<span>Where did you get your sanctuary?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryThree" placeholder="Why do you oppose your nemesis?" style="height: 46px;"></textarea>
+			<span>Why do you oppose your nemesis?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFour" placeholder="Who, outside of the team, is crucial to defeating your nemesis?" style="height: 46px;"></textarea>
+			<span>Who, outside of the team, is crucial to defeating your nemesis?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFive" placeholder="Why does the team matter to you?" style="height: 46px;"></textarea>
+			<span>Why does the team matter to you?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryAdd" placeholder="Additional Backstory Notes" style="height: 50px;"></textarea>
+			<span>Additional Backstory Notes</span>
+			</label>
+			<p>Once you’ve finished your backstory, introduce your character to the other players, and then determine what happened when your team first came together, the relationships between you and your teammates, and who has Influence over you.</p>
+		</div>
+
+		<div>
+			<h2>When our team first came together...</h2>
+			<p>We paid a high cost for victory</p>
+			<label class="has-float-label">
+				<textarea rows="2" name="firstTogether" placeholder="What was it?" style="height: 65px;"></textarea>
+				<span>What was it?</span>
+			</label>
+		</div>
+
+		<h2>Relationships</h2>
+			You told <textarea rows="1" name="relationshipOne" class="inline" style="height: inherit;"></textarea> all about your doom and the danger you're in.<br>
+			You'd love to kiss <textarea rows="1" name="relationshipTwo" class="inline" style="height: inherit;"></textarea> before your doom comes.
+		
+		<div>
+			<h2>Influence</h2>
+			<p>These people matter for what you need to do. Give Influence to two of your teammates.</p>
+			<label class="has-float-label">
+				<textarea rows="1" name="influenceOver" placeholder="Who has influence over you" style="height: 50px;"></textarea>
+				<span>Who has influence over you</span>
+			</label>
+			<label class="has-float-label">
+				<textarea rows="1" name="influenceOf" placeholder="I have influence over..." style="height: 50px;"></textarea>
+				<span>I have influence over...</span>
+			</label>
+		</div>
+
+		<div class="moves">
+			<div><h2>Doomed</h2>
+				<p>You’re doomed. Your powers may be killing you, or maybe you’re hunted ruthlessly, or maybe you embody an apocalypse. But one way or another, your future is grim.What brings your doom closer? Choose two.</p>
+				<div class="abilities">
+					<span class="nowrap">
+						<input type="checkbox" name="doomOne" id="doomOne" value="exerting yourself">
+						<label for="doomOne"> exerting yourself</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="doomTwo" id="doomTwo" value="injuring innocents">
+						<label for="doomTwo"> injuring innocents</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="doomThree" id="doomThree" value="facing danger alone">
+						<label for="doomThree"> facing danger alone</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="doomfour" id="doomFour" value="frightening loved ones">
+						<label for="doomFour"> frightening loved ones</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="doomFive" id="doomFive" value="showing mercy">
+						<label for="doomFive"> showing mercy</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="doomSix" id="doomSix" value="talking about it openly">
+						<label for="doomSix"> talking about it openly</label>
+					</span>
+				</div>
+				<p>Whenever you bring your doom closer, mark one box on your doom track</p>
+				<div>
+					<h3>Doom Track: 
+						<input type="checkbox" name="doomtrackOne" id="doomtrackOne">
+						<input type="checkbox" name="doomtrackTwo" id="doomtrackTwo">
+						<input type="checkbox" name="doomtrackThree" id="doomtrackThree">
+						<input type="checkbox" name="doomtrackFour" id="doomtrackFour">
+						<input type="checkbox" name="doomtrackFive" id="potentialFive">
+					</h3>
+				</div>
+				<p>When your doom track fills, clear it and take one of your doomsigns.</p>
+			</div>
+			<div><h2>Doomsigns</h2>
+				<p>These are abilities that come to you with your approaching doom. Once you have taken all five doomsigns above the line, you must take “Your doom arrives” the next time your doom track fills. <b>Choose one doomsign you already hold at character creation.</b></p>
+				<div class="charMove">
+					<input type="checkbox" name="moveOne" id="moveOne" value="Dark Visions"><label for="moveOne"> Dark Visions: </label> 
+					Mark your doom track to have a vision about the situation at hand. After the vision, ask the GM a question; they will answer it honestly.
+				</div>
+				<div class="charMove">
+					<input type="checkbox" name="moveTwo" id="moveTwo" value="Infinite Powers"><label for="moveTwo"> Infinite Powers:</label> 
+					Mark your doom track to use an ability from any playbook, one time.
+				</div>
+				<div class="charMove">
+					<input type="checkbox" name="moveThree" id="moveThree" value="Portal"><label for="moveThree"> Portal:</label> 
+					Mark your doom track to appear in a scene with anyone you want.
+				</div>
+				<div class="charMove">
+					<input type="checkbox" name="moveFour" id="moveFour" value="Burning Bright"><label for="moveFour">  Burning Bright:</label> 
+					Mark your doom track to ignore one of the GM’s stated requirements when you call upon the resources of your sanctuary.
+				</div>
+				<div class="charMove">
+					<input type="checkbox" name="moveFive" id="moveFive" value="Bolstered"><label for="moveFive">Bolstered:</label> 
+					Mark your doom track to use an Adult Move one time.
+				</div>
+				<div class="charMove">
+					<input type="checkbox" name="moveSix" id="moveSix" value="Your doom arrives;"><label for="moveSix"> Your doom arrives;</label> confront it and perish.
+				</div>
+			</div>
+			<div><h2>Sanctuary</h2>
+				<p>You have a place where you can rest, recover, and reflect upon your powers. Choose three features of your sanctuary:</p>
+				<div class="abilities">
+					<span class="nowrap">
+						<input type="checkbox" name="sancfeatOne" id="sancfeatOne" value="An aide or assistant">
+						<label for="sancfeatOne"> An aide or assistant</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sancfeatTwo" id="sancfeatTwo" value="locks and traps">
+						<label for="sancfeatTwo"> locks and traps</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sancfeatThree" id="sancfeatThree" value="a library of valuable tomes">
+						<label for="sancfeatThree"> a library of valuable tomes</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sancfeatfour" id="sancfeatFour" value="a scattering of ancient relics">
+						<label for="sancfeatFour"> a scattering of ancient relics</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sancfeatFive" id="sancfeatFive" value="a teleportal">
+						<label for="sancfeatFive"> a teleportal</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sancfeatSix" id="sancfeatSix" value="a containment system">
+						<label for="sancfeatSix"> a containment system</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sancfeatSeven" id="sancfeatSeven" value="a powerful computer">
+						<label for="sancfeatSeven"> a powerful computer</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sancfeatEight" id="sancfeatEight" value="useful tools">
+						<label for="sancfeatEight"> useful tools</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sancfeatNine" id="sancfeatNine" value="a meditation space">
+						<label for="sancfeatNine"> a meditation space</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sancfeatTen" id="sanfeatTen" value="a power battery">
+						<label for="sancfeatTen"> a power battery</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sancfeatEleven" id="sancfeatEleven" value="a power enhancement system">
+						<label for="sancfeatEleven"> a power enhancement systeml</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sancfeatTwelve" id="sancfeatTwelve" value="healing equipment">
+						<label for="sancfeatTwelve"> healing equipment</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sancfeatThirteen" id="sancfeatThirteen" value="art, music, and food">
+						<label for="sancfeatThirteen"> art, music, and food</label>
+					</span>
+				</div>
+				<p>Choose and underline two downsides of your sanctuary:</p>
+				<div class="abilities">
+					<span class="nowrap">
+						<input type="checkbox" name="sancflawOne" id="sancflawOne" value="Difficult to access">
+						<label for="sancflawOne"> Difficult to access</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sancflawTwo" id="sancflawTwo" value="draws dangerous attention">
+						<label for="sancflawTwo"> draws dangerous attention</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sancflawThree" id="sancflawThree" value="location known to many">
+						<label for="sancflawThree"> location known to many</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sancflawfour" id="sancflawFour" value="easily damaged or tampered with">
+						<label for="sancflawFour"> easily damaged or tampered with</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sancflawFive" id="sancflawFive" value="tied intricately to your doom">
+						<label for="sancflawFive"> tied intricately to your doom</label>
+					</span>
+				</div>
+				<p>When you call upon the resources of your sanctuary to solve a problem, say what you want to do. The GM will give you one to four conditions you must fulfill to complete your solution:</p>
+				<div class="abilities">
+					<span class="nowrap">
+						<input type="checkbox" name="sanccostOne" id="sanccostOne" value="First you must">
+						<label for="sanccostOne"> First you must </label> 
+						<textarea rows="1" name="sanctextOne" class="inline" style="height: inherit;"></textarea>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sanccostTwo" id="sanccostTwo" value="You&#39;ll need help from">
+						<label for="sanccostTwo"> You'll need help from</label> 
+						<textarea rows="1" name="sanctextTwo" class="inline" style="height: inherit;"></textarea>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sanccostThree" id="sanccostThree" value="You and your team will risk danger from">
+						<label for="sanccostThree"> You and your team will risk danger from</label> 
+						<textarea rows="1" name="sanctextThree" class="inline" style="height: inherit;"></textarea>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sanccostFour" id="sanccostFour" value="the best you can do is a lesser version, unreliable and limited">
+						<label for="sanccostFour"> The best you can do is a lesser version, unreliable and limited</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sanccostFive" id="sanccostFive" value="You’ll need to mark one box on your doom track">
+						<label for="sanccostFive"> You’ll need to mark one box on your doom track</label>
+					</span>
+					<span class="nowrap">
+						<input type="checkbox" name="sanccostSix" id="sanccostSix" value="You’ll have to obtain">
+						<label for="sanccostSix"> You’ll have to obtain</label> 
+						<textarea rows="1" name="sanctextSix" class="inline" style="height: inherit;"></textarea>
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<h2>Moment of Truth</h2>
+			<p>The prickly tingling fear of your doom, always in your head—it holds you back most of the time. But right here, right now? It gives you the confidence to do anything. After all, what’s the worst that could happen? Is it worse than your doom? Do impossible things. Do anything. But mark a doomsign after you’re finished.</p>
+			<label for="truthUnlockOne"> Unlock 1:</label> <input type="checkbox" name="truthUnlockOne" id="truthUnlockOne"><label for="truthUsedOne"> Use 1:</label> <input type="checkbox" name="truthUsedOne" id="truthUsedOne">
+			<label for="truthUnlockTwo"> Unlock 2:</label> <input type="checkbox" name="truthUnlockTwo" id="truthUnlockTwo"><label for="truthUsedTwo"> Use 2:</label> <input type="checkbox" name="truthUsedTwo" id="truthUsedTwo">
+		</div>
+
+		<div>
+			<h2>Team Moves</h2>
+			<p>When you share a triumphant celebration with someone, give them Influence over you and spend a Team from the pool to clear one box on your doom track.</p>
+			<p>When you share a vulnerability or weakness with someone, give them Influence over you and ask if they honestly think there’s hope for you. If they say yes, mark potential or clear one box of your doom track. If they say no, mark a condition or mark your doom track.</p>
+		</div>
+
+		<div>
+			<h2>Potential</h2>
+			<div>
+				<input type="checkbox" name="potentialOne" id="potentialOne">
+				<input type="checkbox" name="potentialTwo" id="potentialTwo">
+				<input type="checkbox" name="potentialThree" id="potentialThree">
+				<input type="checkbox" name="potentialFour" id="potentialFour">
+				<input type="checkbox" name="potentialFive" id="potentialFive"> 
+			</div>
+		</div>
+
+		<div>
+			<h2>Advancement</h2>
+			<p>When you fill your potential track, you advance. Choose from the list below.</p>
+			<input type="checkbox" name="advanceOne" id="advanceOne"> Take another move from another playbook<br>
+			<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another move from another playbook<br>
+			<input type="checkbox" name="advanceThree" id="advanceThree"> Take a move from another playbook<br>
+			<input type="checkbox" name="advanceFour" id="advanceFour"> Someone permanently loses Influence over you; add +1 to a Label<br>
+			<input type="checkbox" name="advanceSix" id="advanceSix"> Rearrange your Labels as you choose, and add +1 to a Label<br>
+			<input type="checkbox" name="advanceSeven" id="advanceSeven"> Unlock your Moment of Truth<br>
+			<input type="checkbox" name="advanceEight" id="advanceEight"> Clear a doomsign; you lose access to that move for now<br>
+			<input type="checkbox" name="advanceFive" id="advanceFive"> Get burn and three flares (from the Nova’s playbook)<br>
+			<p>When you’ve taken five advances from the top list, you can take advances from the list below.</p>
+			<input type="checkbox" name="advanceNine" id="advanceNine"> Unlock your Moment of Truth after it’s been used once<br>
+			<input type="checkbox" name="advanceTen" id="advanceTen"> Confront your doom on your terms; if you survive, change playbooks<br>
+			<input type="checkbox" name="advanceEleven" id="advanceEleven"> Take an adult move<br>
+			<input type="checkbox" name="advanceTwelve" id="advanceTwelve"> Take an adult move<br>
+			<input type="checkbox" name="advanceThirteen" id="advanceThirteen"> Lock a Label, and add +1 to a Label of your choice<br>
+			<input type="checkbox" name="advanceFourteen" id="advanceFourteen"> Retire from the life or become a paragon of the city<br>
+		</div>
+
+		<h2>Other Moves</h2>
+			<textarea rows="8" name="otherMoves" style="width: 100%; height: 127px;"></textarea>
+	</form>
+</body>
+</html>

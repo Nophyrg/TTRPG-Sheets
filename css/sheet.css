@@ -1,6 +1,6 @@
 	:root {
-		--main-color: #4a7284;
-		--link-color: #4a7284;
+		--main-color: #141414;
+		--link-color: #897833;
 		--bold-color: #9a3b3f;
 	}
 	
@@ -21,20 +21,17 @@
 		width: 100%;
 		margin: 0 auto;
 		text-align: center;
+		text-transform: uppercase;
 	}
 	h1, h2, h3 {
 		color: var(--main-color);
 		font-weight: 800;
-		text-transform: uppercase;
 	}
 	h2 {
 		margin-bottom: 4px;
 		margin-left: -12px;
 		padding-left: 12px;
 		padding-top: 6px;
-		font-style: italic;
-		border-left: 6px solid  var(--main-color);
-		border-top: 2px solid  var(--main-color);
 	}
 
 	a {

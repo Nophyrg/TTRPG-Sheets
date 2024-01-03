@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Joined</title>
+	<meta name="description" content="Masks RPG Responsive Character Sheet">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="../../index_files/morb.jpg">
+	<link rel="stylesheet" href="../../../css/has-float-label.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../../../css/masks-sheet.css">
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header>
+		<h1>Masks RPG Playbook - Joined</h1>
+		<a href="../../index.html" style="text-align: center;">Home</a>
+		<a href="JoinedDesc.html">Description</a>
+	</header>
+	<form id="charSheet">
+		<img src="../../Images/portrait-joined.jpg" id="charImage"><br>
+		You'd be nothing without them - your partner, your friend, your rival, your other half. You're tied to their powers and to them, through and through. The rest of the world only ever sees you two as halves of a whole - not as two separate people. And the two of you aren't sure if they're right.
+		<div style="white-space: nowrap;">
+			<label class="has-float-label">
+			<input type="text" name="otherHalf" id="otherHalf" placeholder="Other Half">
+			<span>Other Half</span>
+			</label>
+			<label class="has-float-label">
+			<input type="text" name="charName" id="charName" placeholder="Hero Name">
+			<span>Hero Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="text" name="realName" id="realName" placeholder="Real Name">
+			<span>Real Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" 
+			value="https://nophyrg.github.io/Masks/Images/portrait-joined.jpg" 
+			data-original-value="https://nophyrg.github.io/Masks/Images/portrait-joined.jpg">
+			<span>Portrait URI</span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Look</h2>
+			<p>You look similar to your other half, and your costume choice is always the same as theirs. Choose two other options they have selected that you share; then, choose two options from the lists below.</p>
+			<input type="text" name="genders" list="genders" placeholder="Gender">
+			<input type="text" name="race" list="races" placeholder="Race"> 
+			<input type="text" name="face" list="faces" placeholder="Face"> 
+			<input type="text" name="clothing" list="clothing" placeholder="Clothing"> 
+			<input type="text" name="costume" placeholder="Costume">
+			<datalist id="genders">
+				<option value="ambiguous"></option>
+				<option value="man"></option>
+				<option value="shifting"></option>
+				<option value="transgressing"></option>
+				<option value="woman"></option>
+			</datalist>
+			<datalist id="races">
+				<option value="Asian or South Asian">
+				</option><option value="Black">
+				</option><option value="Hispanic/Latino">
+				</option><option value="Indigenous">
+				</option><option value="Middle Eastern">
+				</option><option value="White"></option>
+			</datalist>
+			<datalist id="faces">
+				<option value="brooding face">
+				</option><option value="curious face">
+				</option><option value="judging face">
+				</option><option value="unreadable face"></option>
+			</datalist>
+			<datalist id="clothing">
+				<option value="casual clothing"></option>
+				<option value="eccentric clothing"></option>
+				<option value="dark clothing"></option>
+				<option value="light clothing"></option>
+			</datalist>
+			<label class="has-float-label">
+				<textarea rows="2" name="lookDesc" id="lookDesc" placeholder="Describe Your Look" class="description"></textarea>
+				<span>Describe your look: </span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Abilities</h2>
+			<p>Your powers complement your other half’s. You have the same abilities they have. At least for now</p>
+			<label class="has-float-label">
+				<textarea rows="2" name="abilityStyle" id="abilityStyle" placeholder="Describe how your abilities appear" class="description"></textarea>
+				<span>Describe how your abilities appear: </span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Labels</h2>
+			<p>Your Labels start off the same as your other half ’s, but you may shift up any one Label, and shift down any one Label.</p>
+			<div class="labels" style="max-width: 15em;">
+				<p>Danger <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charDanger" min="-2" max="3" value="" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Freak <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charFreak" min="-2" max="3" value="" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Savior <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charSavior" min="-2" max="3" value="" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Superior <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charSuperior" min="-2" max="3" value="" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Mundane <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charMundane" min="-2" max="3" value="" class="alignRight" style="margin-right: 1em;"></p>
+			</div>
+		</div>
+
+		<div class="conditions">
+			<h2 style="margin-bottom: 15px;">Conditions</h2>
+			<input type="checkbox" name="conAfraid" id="conAfraid" value="Afraid"><label for="conAfraid"> Afraid</label> (-2 to directly engage a threat)<br>
+			<input type="checkbox" name="conAngry" id="conAngry" value="Angry"><label for="conAngry"> Angry</label> (-2 to comfort or support or pierce the mask) <br>
+			<input type="checkbox" name="conGuilty" id="conGuilty" value="Guilty"><label for="conGuilty"> Guilty</label> (-2 to provoke someone or assess the situation)<br> 
+			<input type="checkbox" name="conHopeless" id="conHopeless" value="Hopeless"><label for="conHopeless"> Hopeless</label> (-2 to unleash your powers)<br> 
+			<input type="checkbox" name="conInsecure" id="conInsecure" value="Insecure"><label for="conInsecure"> Insecure</label> (-2 to defend someone or reject others’ influence)<br> 
+		</div>
+		
+		<div class="backstory">
+			<h2>Backstory</h2>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryOne" placeholder="How did you and your other half become connected?" style="height: 50px;"></textarea>
+			<span>How did you and your other half become connected?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryTwo" placeholder="Who or what did you have to give up because of your connection?" style="height: 50px;"></textarea>
+			<span>Who or what did you have to give up because of your connection?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryThree" placeholder="Apart from your powers, what keeps you together?" style="height: 50px;"></textarea>
+			<span>Apart from your powers, what keeps you together?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFour" placeholder="Someone outside the team thinks you’d be better off on your own. Who are they and why do they think that?" style="height: 50px;"></textarea>
+			<span>Someone outside the team thinks you’d be better off on your own. Who are they and why do they think that?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFive" placeholder="Why do you care about the team?" style="height: 50px;"></textarea>
+			<span>Why do you care about the team?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryAdd" placeholder="Additional Backstory Notes" style="height: 50px;"></textarea>
+			<span>Additional Backstory Notes</span>
+			</label>
+			<p>Once you’ve finished your backstory, introduce your character to the other players, and then determine what happened when your team first came together, the relationships between you and your teammates, and who has Influence over you.</p>
+		</div>
+		
+		<div>
+			<h2>When our team first came together...</h2>
+			<p>The connection between our two halves was threatened by the crisis.</p>
+			<label class="has-float-label">
+				<textarea rows="1" name="firstTogether" placeholder=" How? By what?" style="height: 50px;"></textarea>
+				<span> How? By what?</span>
+			</label>
+		</div>
+
+		<h2>Relationships</h2>
+			When you have problems with your other half, you talk to <textarea rows="1" name="relationshipOne" class="inline" style="height: 2px;"></textarea>.<br>
+			You are jealous of the relationship between your other half and <textarea rows="1" name="relationshipTwo" class="inline" style="height: 2px;"></textarea>, and you keep trying to interject yourself.<br>
+		
+		<div>
+			<h2>Influence</h2>
+			<p>Are you more or less trusting than your other half?: <select name="trusting" id="trusting"><option value="more">more</option><option value="less">less</option></select></p>
+			<p>If more trusting, give out one more Influence than they did.</p>
+			<p>If less, then give out one less Influence than they did.</p>
+			<p>If you didn’t get Influence over your other half, then take it now. If you didn’t give Influence to your other half, then give it now.</p>
+			<label class="has-float-label">
+				<textarea rows="1" name="influenceOver" placeholder="Who has influence over you" style="height: 50px;"></textarea>
+				<span>Who has influence over you</span>
+			</label>
+			<label class="has-float-label">
+				<textarea rows="1" name="influenceOf" placeholder="I have influence over..." style="height: 50px;"></textarea>
+				<span>I have influence over...</span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Your Other Half</h2>
+			<p>You share a deep bond with your other half. You are stronger together than you are apart, for now. 
+				If your other half is a Delinquent, Outsider, or Transformed, take two moves from their playbook: 
+				one they have and one they don’t. Remember that you share much beyond your moves; 
+				i.e., if your other half is an Outsider, you both hail from the same dimension/planet/etc. 
+				For all other playbooks, you share in the core extras of your other half. 
+			</p>
+			<ul>
+				<li><b>Beacon: </b>Take drives and mark four of your choice. When your other half strikes out a drive, strike it out as well.</li>
+				<li><b>Bull: </b>Take The Bull’s Heart with the same love and rival as your other half. Choose a different role that you commonly fulfill.</li>
+				<li><b>Janus: </b>Take <b>The Mask</b> and a secret identity. Choose a different Label for your Mask. Take two obligations: one shared, one unique to you</li>
+				<li><b>Legacy: </b>Take a legacy. Your other half fills in as many names in the initial list as they choose; you fill in the rest. You can never answer the questions for your other half’s Legacy move</li>
+				<li><b>Protégé: </b>You share a mentor with your other half. When they finish defining your mentor and resources, choose an additional resource</li>
+				<li><b>Doomed: </b>Take a sanctuary, a doom, and a doom track: You and your other half share the conditions that bring your doom closer and a doom track; when it fills, you both choose a new doomsign. You start with the doomsign your other half chose. Your other half picks the initial features and downsides of your shared sanctuary. You choose one more of each.</li>
+				<li><b>Nova: </b>Take burn and four flares, two shared and two unique to you.</li>
+			</ul>
+			Notes and Moves:
+			<textarea rows="8" name="Moves" style="width: 100%; height: 153px;"></textarea>
+		</div>
+		
+		<div class="moves">
+			<h2>Bonds and Distinctions</h2>
+			<p>At character creation you start with Two of a kind, and choose one other bond. 
+				When either you or your other half locks a Label, cross off one of your chosen bonds and choose a distinction.
+			</p>
+			<h4>Bonds:</h4>
+			<div class="charMove">
+				<input type="checkbox" name="bondOne" id="bondOne" checked="true" value="Two of a kind"><label for="bondOne"> Two of a kind: </label>
+				When time passes, you and your other half gain Influence over each other. When you or your other half <b>pierces the other’s mask</b>, mark a condition to take a 10+.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="bondTwo" id="bondTwo" value="Fastball special"><label for="bondTwo"> Fastball special: </label>
+				When you perform a coordinated fighting maneuver with your other half, say who takes the lead and who assists. The leader rolls the adult move <b>overwhelm a vulnerable foe</b>. The assistant marks a condition. 
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="bondThree" id="bondThree" value="Powers, activate!"><label for="bondThree"> Powers, activate!: </label>
+				When you and your other half pool your powers, say who takes the lead and who assists. The leader <b>unleashes their powers</b> with your combined Freak (max+4). The assistant shifts Savior down, Mundane up.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="bondFour" id="bondFour" value="Four eyes are better"><label for="bondFour"> Four eyes are better: </label>
+				When you and your other half <b>assess the situation</b> from two different vantage points, one of you makes the move, and the other may either clear a condition or ask an additional question. You both get +1 when following the answers.
+			</div>
+
+			<h4>Distinctions:</h4>
+			<div class="charMove">
+				<input type="checkbox" name="distinctionOne" id="distinctionOne" value="Mirror, mirror"><label for="distinctionOne"> Mirror, mirror: </label>
+				When you <b>pierce someone’s mask</b>, you can ask them “What are you really feeling right now?”, even on a miss. If you do, they can ask you the same question.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="distinctionTwo" id="distinctionTwo" value="Shouldering the burden"><label for="distinctionTwo"> Shouldering the burden: </label>
+				When you push yourself to do something your other half failed at or can’t do, mark a condition to use the adult move <b>wield your powers</b>.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="distinctionThree" id="distinctionThree" value="Going solo"><label for="distinctionThree"> Going solo: </label>
+				When you <b>directly engage a threat</b> entirely on your own, you can roll + Superior instead of + Danger.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="distinctionFour" id="distinctionFour" value="Internal strife"><label for="distinctionFour"> Internal strife: </label>
+				When you snipe about your other half behind their back, remove one Team from the pool and clear a condition.
+			</div>
+		</div>
+
+		<div>
+			<h2>Moment of Truth</h2>
+			<p>When you trigger your Moment of Truth, choose—are you working with your other half, or are you on your own?</p>
+			<p>If you’re working with your other half, use the text of their Moment of Truth and treat it as if it applies to both of you. Remember to lock your Label and switch a bond to a distinction because you’ll probably never reach these heights of perfect connection, of being one, ever again…</p>
+			<p>If you’re on your own, use the following text:</p>
+			<p>You’re on your own. It’s like missing an arm. Like fighting naked. Like holding your breath. You’re missing something vital...but you’re moving faster than ever, thinking faster than ever, doing things you couldn’t even do while relying on both of your strength combined. And it’s hitting you, hard—you can do this. Without them. And you can win. It’s going to be hard to come down off this high and rejoin with them afterwards, isn’t it? </p>
+			<p>Remember to lock a Label and switch a bond to a distinction, afterward.</p>
+			<label for="truthUnlockOne"> Unlock 1:</label> <input type="checkbox" name="truthUnlockOne" id="truthUnlockOne"><label for="truthUsedOne"> Use 1:</label> <input type="checkbox" name="truthUsedOne" id="truthUsedOne">
+			<label for="truthUnlockTwo"> Unlock 2:</label> <input type="checkbox" name="truthUnlockTwo" id="truthUnlockTwo"><label for="truthUsedTwo"> Use 2:</label> <input type="checkbox" name="truthUsedTwo" id="truthUsedTwo">
+		</div>
+
+		<div>
+			<h2>Team Moves</h2>
+			<p>When one of you <b>shares moment of vulnerability</b> or <b>shares a triumphant celebration</b> without the other one present, mark a condition to mark a potential.</p>
+		</div>
+
+		<div>
+			<h2>Potential</h2>
+			<div>
+				<input type="checkbox" name="potentialOne" id="potentialOne">
+				<input type="checkbox" name="potentialTwo" id="potentialTwo">
+				<input type="checkbox" name="potentialThree" id="potentialThree">
+				<input type="checkbox" name="potentialFour" id="potentialFour">
+				<input type="checkbox" name="potentialFive" id="potentialFive"> 
+			</div>
+		</div>
+
+		<div>
+			<h2>Advancement</h2>
+			<p>When you fill your potential track, you advance. Choose from the list below.</p>
+			<input type="checkbox" name="advanceOne" id="advanceOne"> Take one new bond<br>
+			<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take one new distinction<br>
+			<input type="checkbox" name="advanceThree" id="advanceThree"> Take a move from another playbook<br>
+			<input type="checkbox" name="advanceFour" id="advanceFour"> Gain two new abilities from any playbook<br>
+			<input type="checkbox" name="advanceFive" id="advanceFive"> Take an advancement from your other half’s playbook<br>
+			<input type="checkbox" name="advanceSix" id="advanceSix"> Someone permanently loses Influence over you; add +1 to a Label<br>
+			<input type="checkbox" name="advanceSeven" id="advanceSeven"> Rearrange your Labels as you choose, and add +1 to a Label<br>
+			<input type="checkbox" name="advanceEight" id="advanceEight"> Unlock your Moment of Truth<br>
+			<p>When you’ve taken five advances from the top list, you can take advances from the list below.</p>
+			<input type="checkbox" name="advanceNine" id="advanceNine"> Unlock your Moment of Truth after it’s been used once<br>
+			<input type="checkbox" name="advanceTen" id="advanceTen"> Change playbooks<br>
+			<input type="checkbox" name="advanceEleven" id="advanceEleven"> Take an adult move<br>
+			<input type="checkbox" name="advanceTwelve" id="advanceTwelve"> Take an adult move<br>
+			<input type="checkbox" name="advanceThirteen" id="advanceThirteen"> Lock a Label, and add +1 to a Label of your choice<br>
+			<input type="checkbox" name="advanceFourteen" id="advanceFourteen"> Retire from the life or become a paragon of the city<br>
+		</div>
+
+		<h2>Other Moves</h2>
+			<textarea rows="8" name="otherMoves" style="width: 100%; height: 153px;"></textarea>
+	</form>
+</body>
+</html>

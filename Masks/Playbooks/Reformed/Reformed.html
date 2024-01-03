@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Reformed</title>
+	<meta name="description" content="Masks RPG Responsive Character Sheet">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="../../index_files/morb.jpg">
+	<link rel="stylesheet" href="../../../css/has-float-label.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../../../css/masks-sheet.css">
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header>
+		<h1>Masks RPG Playbook - Reformed</h1>
+		<a href="../../index.html" style="text-align: center;">Home</a>
+		<a href="ReformedDesc.html">Description</a>
+	</header>
+	<form id="charSheet">
+		<img src="../../Images/portrait-reformed.jpg" id="charImage"><br>
+		Villainy used to be a way of life for you. Then you saw just what your selfishness and hate created. The supervillain life is a hard one to quit. But you know this best: sometimes the villain needs saving too.
+		<div style="white-space: nowrap;">
+			<label class="has-float-label">
+			<input type="text" name="charName" id="charName" placeholder="Hero Name">
+			<span>Hero Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="text" name="realName" id="realName" placeholder="Real Name">
+			<span>Real Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" 
+			value="https://nophyrg.github.io/Masks/Images/portrait-reformed.jpg" 
+			data-original-value="https://nophyrg.github.io/Masks/Images/portrait-reformed.jpg">
+			<span>Portrait URI</span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Look</h2>
+			<input type="text" name="genders" list="genders" placeholder="Gender">
+			<input type="text" name="race" list="races" placeholder="Race"> 
+			<input type="text" name="eye" list="eyes" placeholder="Eyes"> 
+			<input type="text" name="clothing" list="clothing" placeholder="Clothing"> 
+			<input type="text" name="costume" list="costumes" placeholder="Costumes">
+			<datalist id="genders">
+				<option value="ambiguous"></option>
+				<option value="man"></option>
+				<option value="shifting"></option>
+				<option value="transgressing"></option>
+				<option value="woman"></option>
+			</datalist>
+			<datalist id="races">
+				<option value="Asian or South Asian">
+				</option><option value="Black">
+				</option><option value="Hispanic/Latino">
+				</option><option value="Indigenous">
+				</option><option value="Middle Eastern">
+				</option><option value="White"></option>
+			</datalist>
+			<datalist id="eyes">
+				<option value="sad eyes">
+				</option><option value="technicolor eyes">
+				</option><option value="shadowy eyes">
+				</option><option value="gorgeous eyes"></option>
+			</datalist>
+			<datalist id="clothing">
+				<option value="conservative clothes"></option>
+				<option value="school uniform"></option>
+				<option value="concealing fashion"></option>
+				<option value="expensive fashion"></option>
+			</datalist>
+			<datalist id="costumes">
+				<option value="tattered costume"></option>
+				<option value="normal clothes"></option>
+				<option value="sleek costume"></option>
+				<option value="regal costume"></option>
+			</datalist>
+		</div>
+		<label class="has-float-label">
+			<textarea rows="2" name="lookDesc" id="lookDesc" placeholder="Describe Your Look" class="description"></textarea>
+			<span>Describe your look: </span>
+		</label>
+
+		<div>
+			<h2>Abilities</h2>
+			<p>You’re young, but you’ve been around for a few years before switching teams. You know how to
+			fight, but you’re known for one ability more than any other. Choose one.</p>
+			<div class="abilities">
+				<span class="nowrap">
+					<input type="checkbox" name="abilityOne" id="abilityOne" value="poison, venom, or acid control">
+					<label for="abilityOne">
+					<select name="abilityOneOption">
+						<option value="poison">poison</option>
+						<option value="venom">venom</option>
+						<option value="Acid Control">acid control</option>
+					</select></label>
+				</span>
+				<span class="nowrap">
+					<input type="checkbox" name="abilityTwo" id="abilityTwo" value="ferrokinesis">
+					<label for="abilityTwo">ferrokinesis</label>
+				</span>
+				<span class="nowrap">
+					<input type="checkbox" name="abilityThree" id="abilityThree" value="fear manipulation">
+					<label for="abilityThree">fear manipulation</label>
+				</span>
+				<span class="nowrap">
+					<input type="checkbox" name="abilityfour" id="abilityFour" value="weapons and martial expertise">
+					<label for="abilityFour">weapons and martial expertise</label>
+				</span>
+				<span class="nowrap">
+					<input type="checkbox" name="abilityFive" id="abilityFive" value="vitality absorption">
+					<label for="abilityFive">vitality absorption</label>
+				</span>
+				<span class="nowrap">
+					<input type="checkbox" name="abilitySix" id="abilitySix" value="acrobatics">
+					<label for="abilitySix">geokinesis</label>
+				</span>
+			</div>
+			<label class="has-float-label">
+				<textarea rows="2" name="abilityStyle" id="abilityStyle" placeholder="Describe how your abilities appear" class="description"></textarea>
+				<span>Describe how your abilities appear: </span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Labels</h2>
+			<p>(at character creation, add +1 wherever you choose)</p>
+			<div class="labels" style="max-width: 15em;">
+				<p>Danger <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charDanger" min="-2" max="3" value="2" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Freak <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charFreak" min="-2" max="3" value="1" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Savior <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charSavior" min="-2" max="3" value="-1" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Superior <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charSuperior" min="-2" max="3" value="0" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Mundane <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charMundane" min="-2" max="3" value="0" class="alignRight" style="margin-right: 1em;"></p>
+			</div>
+		</div>
+
+		<div class="conditions">
+			<h2 style="margin-bottom: 15px;">Conditions</h2>
+			<input type="checkbox" name="conAfraid" id="conAfraid" value="Afraid"><label for="conAfraid"> Afraid</label> (-2 to directly engage a threat)<br>
+			<input type="checkbox" name="conAngry" id="conAngry" value="Angry"><label for="conAngry"> Angry</label> (-2 to comfort or support or pierce the mask) <br>
+			<input type="checkbox" name="conGuilty" id="conGuilty" value="Guilty"><label for="conGuilty"> Guilty</label> (-2 to provoke someone or assess the situation)<br> 
+			<input type="checkbox" name="conHopeless" id="conHopeless" value="Hopeless"><label for="conHopeless"> Hopeless</label> (-2 to unleash your powers)<br> 
+			<input type="checkbox" name="conInsecure" id="conInsecure" value="Insecure"><label for="conInsecure"> Insecure</label> (-2 to defend someone or reject others’ influence)<br> 
+		</div>
+		
+		<div class="backstory">
+			<h2>Backstory</h2>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryOne" placeholder="Who mentored you in supervillainy?" style="height: 50px;"></textarea>
+			<span>Who mentored you in supervillainy?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryTwo" placeholder="Who first showed you that you could do good?" style="height: 50px;"></textarea>
+			<span>Who first showed you that you could do good?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryThree" placeholder="What was your goal as a villain?" style="height: 50px;"></textarea>
+			<span>What was your goal as a villain?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFour" placeholder="What caused you to switch sides?" style="height: 50px;"></textarea>
+			<span>What caused you to switch sides?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFive" placeholder="Why do you care about the team?" style="height: 50px;"></textarea>
+			<span>Why do you care about the team?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryAdd" placeholder="Additional Backstory Notes" style="height: 50px;"></textarea>
+			<span>Additional Backstory Notes</span>
+			</label>
+			<p>Once you’ve finished your backstory, introduce your character to the other players, and then determine what happened when your team first came together, the relationships between you and your teammates, and who has Influence over you.</p>
+		</div>
+		
+		<div>
+			<h2>When our team first came together...</h2>
+			<p>We fought a terrible enemy from my old life.</p>
+			<label class="has-float-label">
+				<textarea rows="1" name="firstTogether" placeholder="Who was it and what did they take from me?" style="height: 50px;"></textarea>
+				<span>Who was it and what did they take from me?</span>
+			</label>
+		</div>
+
+		<h2>Relationships</h2>
+			I've earned the trust of <textarea rows="1" name="relationshipOne" class="inline" style="height: 2px;"></textarea>, and I follow their example of what a hero should be.<br>
+			I did something terrible to <textarea rows="1" name="relationshipTwo" class="inline" style="height: 2px;"></textarea> once. I hope they can forgive me one day.<br>
+		
+		<div>
+			<h2>Influence</h2>
+			<p>Do you talk openly about your days as a villain? <select name="openness" id="openness"><option value="yes">yes</option><option value="no">no</option></select></p>
+			<p> If so, give each team member Influence over you.</p>
+			<p>If not, just give Influence to the one teammate whose example you most closely follow.</p>
+			<label class="has-float-label">
+				<textarea rows="1" name="influenceOver" placeholder="Who has influence over you" style="height: 50px;"></textarea>
+				<span>Who has influence over you</span>
+			</label>
+			<label class="has-float-label">
+				<textarea rows="1" name="influenceOf" placeholder="I have influence over..." style="height: 50px;"></textarea>
+				<span>I have influence over...</span>
+			</label>
+		</div>
+
+		<div class="moves">
+			<h2>Reformed Moves</h2>
+			<p>(Choose two)</p>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" value="Straight. Up. Creepin&#39;">
+				<label for="moveOne">What the hell, hero:</label> 
+				When you call out an injustice that a hero has perpetrated, roll + Danger. 
+				On a hit, take Influence over them. On a 7-9, choose one. On a 10+, choose two
+				<ul>
+					<li>You get them to admit their wrongdoing</li>
+					<li>You win over an onlooker; take Influence over them</li>
+					<li>You don’t turn their attention and anger onto yourself</li>
+				</ul>
+				On a miss, they dismiss you; mark a condition 
+				(their choice), shift Danger up, Savior down.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveTwo" id="moveTwo" value="Wrong side of the tracks">
+				<label for="moveTwo">Wrong side of the tracks:</label> 
+				You always get to ask an additional question when you <b>pierce the mask</b> of a villain, even on a miss. 
+				When you <b>pierce the mask</b> of a hero (your call), add this question to the list:
+				<ul>
+					<li>what was your darkest moment?</li>
+				</ul>
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveThree" id="moveThree" value="Not so different">
+				<label for="moveThree">Not so different:</label> 
+				When you <b>provoke someone</b> to criminal or villainous action, you can use Danger instead of Superior.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFour" id="moveFour" value="Dark past">
+				<label for="moveFour">Dark past:</label> 
+				When you confess to a serious crime you committed as a villain while in the presence of someone involved, 
+				shift Danger up and any other Label down, say what you did, and choose one.
+				<ul>
+					<li>No one was hurt badly by the crime</li>
+					<li>You aren’t in legal danger from the crime</li>
+					<li>You aren’t being actively pursued for extralegal retribution</li>
+				</ul>
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFive" id="moveFive" value="Blowing off steam">
+				<label for="moveFive">Blowing off steam:</label> 
+				When you commit a misdemeanor or small “victimless” crime, you may clear a condition of your choice.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Do me a favor">
+				<label for="moveSix">Do me a favor:</label>
+				When you go to an ordinary civilian you know for a favor, roll + Mundane.
+				On a 10+, they’ll lend you a hand. On a 7-9, they need a promise up front. 
+				On a miss, you catch them up in your superpowered nonsense, and they suffer for it.
+			</div>
+		</div>
+		
+		<div>
+			<h2>Friends in Low Places</h2>
+			<p>You have ties to villains from your previous career. Choose three names to fill in:</p>
+			<p>For each of them, choose a specialty.</p>
+			<div>
+				<input type="text" name="villain1" list="villains" placeholder="">
+				<b>Specialty: </b>
+				<input type="text" name="villain1Specialty" list="specialties" placeholder="">
+				<b>Obligation</b>
+				<input type="checkbox" name="obligationOne" id="obligationOne">
+				<input type="checkbox" name="obligationTwo" id="obligationTwo">
+				<input type="checkbox" name="obligationThree" id="obligationThree">
+				<input type="checkbox" name="obligationFour" id="obligationFour">
+			</div>
+			<div>
+				<input type="text" name="villain2" list="villains" placeholder="">
+				<b>Specialty: </b>
+				<input type="text" name="villain2Specialty" list="specialties" placeholder="">
+				<b>Obligation</b>
+				<input type="checkbox" name="obligationOne" id="obligationOne">
+				<input type="checkbox" name="obligationTwo" id="obligationTwo">
+				<input type="checkbox" name="obligationThree" id="obligationThree">
+				<input type="checkbox" name="obligationFour" id="obligationFour">
+			</div>
+			<div>
+				<input type="text" name="villain3" list="villains" placeholder="">
+				<b>Specialty: </b>
+				<input type="text" name="villain3Specialty" list="specialties" placeholder="">
+				<b>Obligation</b>
+				<input type="checkbox" name="obligationOne" id="obligationOne">
+				<input type="checkbox" name="obligationTwo" id="obligationTwo">
+				<input type="checkbox" name="obligationThree" id="obligationThree">
+				<input type="checkbox" name="obligationFour" id="obligationFour">
+			</div>
+			<datalist id="villains">
+				<option>Finch, Ellen</option>
+				<option>"Devil" Drummond</option>
+				<option>Mr. Cane</option>
+				<option>The Mad Magpie</option>
+				<option>Dr. Cutler</option>
+				<option>Armorer</option>
+				<option>Tegan Queen</option>
+				<option> Lovelace</option>
+			</datalist>
+			<datalist id="specialties">
+				<option>weapons</option>
+				<option>materials</option>
+				<option>cosmic artifacts</option>
+				<option>alien tech</option>
+				<option>insider info</option>
+			</datalist>
+			<p>When you create your character, mark two obligations on one villain, and mark one obligation on another.</p>
+			<p>When you <b>come to them for help with your problems</b>, mark obligation on them and they’ll help out within their specialty. 
+			If all their boxes are full, then they won’t help you until you help them.</p>
+			<p>When <b>time passes</b>, roll + your highest obligation. 
+			On a 10+, they come crashing into your life with a crisis. On a 7-9, they call for a favor. 
+			On a miss, they don’t come knocking yet, but mark obligation with them—the debts are getting heavier. </p>
+			<p>When you <b>help one of these villains with their problems</b>, erase two obligations on them.</p>
+		</div>
+		
+		<div>
+			<h2>Moment of Truth</h2>
+			<p>You’ve seen your greatest mistakes, and the rest of the world has, too. They’re all watching you
+				now, judging every move you make. When everything is on the line and your back is against the
+				wall, though, you’ll show them what you’re made of—that being a hero is a choice. An act of will.
+				And you’ve got what it takes to save the day. Of course, afterward, you can expect both sides, hero
+				and villain, to deeply question where your loyalties truly lie...</p>
+			<label for="truthUnlockOne"> Unlock 1:</label> <input type="checkbox" name="truthUnlockOne" id="truthUnlockOne"><label for="truthUsedOne"> Use 1:</label> <input type="checkbox" name="truthUsedOne" id="truthUsedOne">
+			<label for="truthUnlockTwo"> Unlock 2:</label> <input type="checkbox" name="truthUnlockTwo" id="truthUnlockTwo"><label for="truthUsedTwo"> Use 2:</label> <input type="checkbox" name="truthUsedTwo" id="truthUsedTwo">
+		</div>
+
+		<div>
+			<h2>Team Moves</h2>
+			<p>When you <b>share a moment of triumph with someone</b>, , ask them what gives them hope for a brighter day and give them Influence.</p>
+			<p>When you <b>share a vulnerability or weakness with someone</b>, ask them what they would do something dark for and gain Influence over them.</p>
+		</div>
+
+		<div>
+			<h2>Potential</h2>
+			<div>
+				<input type="checkbox" name="potentialOne" id="potentialOne">
+				<input type="checkbox" name="potentialTwo" id="potentialTwo">
+				<input type="checkbox" name="potentialThree" id="potentialThree">
+				<input type="checkbox" name="potentialFour" id="potentialFour">
+				<input type="checkbox" name="potentialFive" id="potentialFive"> 
+			</div>
+		</div>
+
+		<div>
+			<h2>Advancement</h2>
+			<p>When you fill your potential track, you advance. Choose from the list below.</p>
+			<input type="checkbox" name="advanceOne" id="advanceOne"> Take another move from your playbook<br>
+			<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another move from your playbook<br>
+			<input type="checkbox" name="advanceThree" id="advanceThree"> Take a move from another playbook<br>
+			<input type="checkbox" name="advanceFour" id="advanceFour"> Take a move from another playbook<br>
+			<input type="checkbox" name="advanceFive" id="advanceFive"> Someone permanently loses Influence over you; add +1 to a Label<br>
+			<input type="checkbox" name="advanceSix" id="advanceSix"> Rearrange your Labels as you choose, and add +1 to a Label<br>
+			<input type="checkbox" name="advanceSeven" id="advanceSeven"> Unlock your Moment of Truth<br>
+			<input type="checkbox" name="advanceEight" id="advanceEight"> Take drives and mark four (from the Beacon's playbook)<br>
+			<p>When you’ve taken five advances from the top list, you can take advances from the list below.</p>
+			<input type="checkbox" name="advanceNine" id="advanceNine"> Unlock your Moment of Truth after it’s been used once<br>
+			<input type="checkbox" name="advanceTen" id="advanceTen"> Change playbooks<br>
+			<input type="checkbox" name="advanceEleven" id="advanceEleven"> Take an adult move<br>
+			<input type="checkbox" name="advanceTwelve" id="advanceTwelve"> Take an adult move<br>
+			<input type="checkbox" name="advanceThirteen" id="advanceThirteen"> Lock a Label, and add +1 to a Label of your choice<br>
+			<input type="checkbox" name="advanceFourteen" id="advanceFourteen"> Retire from the life or become a paragon of the city<br>
+		</div>
+
+		<h2>Other Moves</h2>
+			<textarea rows="8" name="otherMoves" style="width: 100%; height: 153px;"></textarea>
+	</form>
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Scion</title>
+	<meta name="description" content="Masks RPG Responsive Character Sheet">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="../../index_files/morb.jpg">
+	<link rel="stylesheet" href="../../../css/has-float-label.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../../../css/masks-sheet.css">
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header>
+		<h1>Masks RPG Playbook - Scion</h1>
+		<a href="../../index.html" style="text-align: center;">Home</a>
+		<a href="ScionDesc.html">Description</a>
+	</header>
+	<form id="charSheet">
+		<img src="../../Images/portrait-scion.jpg" id="charImage"><br>
+		You're the child - not an acolyte, not a creation, just the friggin' kid - of a true villain. And when anyone who knows you looks at you, all they can see is your parent. Like you don't even matter. Well, forget that. You're out to prove yourself as someone different from them, and how better to do that than to be a superhero?
+		<div style="white-space: nowrap;">
+			<label class="has-float-label">
+			<input type="text" name="charName" id="charName" placeholder="Hero Name">
+			<span>Hero Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="text" name="realName" id="realName" placeholder="Real Name">
+			<span>Real Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" 
+			value="https://nophyrg.github.io/Masks/Images/portrait-scion.jpg" 
+			data-original-value="https://nophyrg.github.io/Masks/Images/portrait-scion.jpg">
+			<span>Portrait URI</span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Look</h2>
+			<input type="text" name="genders" list="genders" placeholder="Gender">
+			<input type="text" name="race" list="races" placeholder="Race"> 
+			<input type="text" name="body" list="bodies" placeholder="Body"> 
+			<input type="text" name="clothing" list="clothing" placeholder="Clothing"> 
+			<input type="text" name="costume" list="costumes" placeholder="Costumes">
+			<datalist id="genders">
+				<option value="ambiguous"></option>
+				<option value="man"></option>
+				<option value="shifting"></option>
+				<option value="transgressing"></option>
+				<option value="woman"></option>
+			</datalist>
+			<datalist id="races">
+				<option value="Asian or South Asian">
+				</option><option value="Black">
+				</option><option value="Hispanic/Latino">
+				</option><option value="Indigenous">
+				</option><option value="Middle Eastern">
+				</option><option value="White"></option>
+			</datalist>
+			<datalist id="bodies">
+				<option value="stocky body">
+				</option><option value="slender body">
+				</option><option value="scrawny body">
+				</option><option value="statuesque body">
+				</option><option value="taut body"></option>
+			</datalist>
+			<datalist id="clothing">
+				<option value="hand-me-down clothing"></option>
+				<option value="expensive clothing"></option>
+				<option value="uniform clothing"></option>
+				<option value="rebellious clothing"></option>
+				<option value="casual clothing"></option>
+			</datalist>
+			<datalist id="costumes">
+				<option value="bright costume"></option>
+				<option value="parent’s costume"></option>
+				<option value="understated costume"></option>
+				<option value="makeshift costume"></option>
+				<option value="no costume"></option>
+			</datalist>
+			<label class="has-float-label">
+				<textarea rows="2" name="lookDesc" id="lookDesc" placeholder="Describe Your Look" class="description"></textarea>
+				<span>Describe your look: </span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Your Lineage</h2>
+			<p>You are the child of a true supervillain. You strive to be different than them, but they are a part of you. Circle at least one option for each question below.</p>
+			<b>What kind of villain are they?</b><br>
+			<span class="striketoggle">
+				<input type="checkbox" name="villainTypeA" id="villainTypeA" value="deadly mercenary"><label for="villainTypeA">deadly mercenary</label>,
+				<input type="checkbox" name="villainTypeB" id="villainTypeB" value="master thief"><label for="villainTypeB">master thief</label>,
+				<input type="checkbox" name="villainTypeC" id="villainTypeC" value="hateful destroyer"><label for="villainTypeC">hateful destroyer</label>,
+				<input type="checkbox" name="villainTypeD" id="villainTypeD" value="zealous crusader"><label for="villainTypeD">zealous crusader</label>,
+				<input type="checkbox" name="villainTypeE" id="villainTypeE" value="cruel mastermind"><label for="villainTypeE">cruel mastermind</label>,
+				<input type="checkbox" name="villainTypeF" id="villainTypeF" value="grand tyrant"><label for="villainTypeF">grand tyrant</label>
+			</span>
+			<br><br><b>What is your relationship with them like?</b><br>
+			<span class="striketoggle">
+				<input type="checkbox" name="relationshipA" id="relationshipA" value="mostly strangers"><label for="relationshipA">mostly strangers</label>,
+				<input type="checkbox" name="relationshipB" id="relationshipB" value="actively adversarial"><label for="relationshipB">actively adversarial</label>,
+				<input type="checkbox" name="relationshipC" id="relationshipC" value="sadly opposed"><label for="relationshipC">sadly opposed</label>,
+				<input type="checkbox" name="relationshipD" id="relationshipD" value="ever-shifting"><label for="relationshipD">ever-shifting</label>,
+				<input type="checkbox" name="relationshipE" id="relationshipE" value="redemption/corruption"><label for="relationshipE">redemption/corruption</label>,
+				<input type="checkbox" name="relationshipF" id="relationshipF" value="full of denial"><label for="relationshipF">full of denial</label>
+			</span>
+			<br><br><b>They have an array of abilities, assets, and strengths; what are some of them? (up to 3)</b><br>
+			<span class="striketoggle">
+				<input type="checkbox" name="villainAbilityA" id="villainAbilityA" value="superhuman martial prowess"><label for="villainAbilityA">superhuman martial prowess</label>,
+				<input type="checkbox" name="villainAbilityB" id="villainAbilityB" value="dark sorcery"><label for="villainAbilityB">dark sorcery</label>,
+				<input type="checkbox" name="villainAbilityC" id="villainAbilityC" value="cosmic might"><label for="villainAbilityC">cosmic might</label>,
+				<input type="checkbox" name="villainAbilityD" id="villainAbilityD" value="diabolical machines"><label for="villainAbilityD">diabolical machines</label>,
+				<input type="checkbox" name="villainAbilityE" id="villainAbilityE" value="endless minions"><label for="villainAbilityE">endless minions</label>,
+				<input type="checkbox" name="villainAbilityF" id="villainAbilityF" value="unrivaled genius"><label for="villainAbilityF">unrivaled genius</label>,
+				<input type="checkbox" name="villainAbilityG" id="villainAbilityG" value="powerful allies"><label for="villainAbilityG">powerful allies</label>,
+				<input type="checkbox" name="villainAbilityH" id="villainAbilityH" value="arsenal of weapons and gadgets"><label for="villainAbilityH">arsenal of weapons and gadgets</label>,
+				<input type="checkbox" name="villainAbilityI" id="villainAbilityI" value="supremely honed skills"><label for="villainAbilityI">supremely honed skills</label>,
+			</span>
+			<br><br><b>What abilities do you use to fight them? (up to 2)</b><br>
+			<span class="striketoggle">
+				<input type="checkbox" name="villainAbilityA" id="villainAbilityA" value="impressive martial prowess"><label for="villainAbilityA">impressive martial prowess</label>,
+				<input type="checkbox" name="villainAbilityB" id="villainAbilityB" value="magical aptitute"><label for="villainAbilityB">magical aptitude</label>,
+				<input type="checkbox" name="villainAbilityC" id="villainAbilityC" value="cosmic energies"><label for="villainAbilityC">cosmic energies</label>,
+				<input type="checkbox" name="villainAbilityD" id="villainAbilityD" value="machine control"><label for="villainAbilityD">machine control</label>,
+				<input type="checkbox" name="villainAbilityE" id="villainAbilityE" value="regeneration"><label for="villainAbilityE">regeneration</label>,
+				<input type="checkbox" name="villainAbilityF" id="villainAbilityF" value="electrokinesis"><label for="villainAbilityF">electrokinesis</label>,
+				<input type="checkbox" name="villainAbilityG" id="villainAbilityG" value="seismic waves"><label for="villainAbilityG">seismic waves</label>,
+				<input type="checkbox" name="villainAbilityH" id="villainAbilityH" value="a powerful weapon or gadget"><label for="villainAbilityH">a powerful weapon or gadget</label>,
+				<input type="checkbox" name="villainAbilityI" id="villainAbilityI" value="mastery of a single skillset"><label for="villainAbilityI">mastery of a single skillset</label>,
+			</span>
+			<label class="has-float-label">
+				<textarea rows="2" name="abilityStyle" id="abilityStyle" placeholder="Describe how your abilities appear" class="description"></textarea>
+				<span>Describe how your abilities appear: </span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Labels</h2>
+			<p>(at character creation, add +1 wherever you choose)</p>
+			<div class="labels" style="max-width: 15em;">
+				<p>Danger <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charDanger" min="-2" max="3" value="1" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Freak <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charFreak" min="-2" max="3" value="0" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Savior <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charSavior" min="-2" max="3" value="1" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Superior <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charSuperior" min="-2" max="3" value="0" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Mundane <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charMundane" min="-2" max="3" value="0" class="alignRight" style="margin-right: 1em;"></p>
+			</div>
+		</div>
+
+		<div class="conditions">
+			<h2 style="margin-bottom: 15px;">Conditions</h2>
+			<input type="checkbox" name="conAfraid" id="conAfraid" value="Afraid"><label for="conAfraid"> Afraid</label> (-2 to directly engage a threat)<br>
+			<input type="checkbox" name="conAngry" id="conAngry" value="Angry"><label for="conAngry"> Angry</label> (-2 to comfort or support or pierce the mask) <br>
+			<input type="checkbox" name="conGuilty" id="conGuilty" value="Guilty"><label for="conGuilty"> Guilty</label> (-2 to provoke someone or assess the situation)<br> 
+			<input type="checkbox" name="conHopeless" id="conHopeless" value="Hopeless"><label for="conHopeless"> Hopeless</label> (-2 to unleash your powers)<br> 
+			<input type="checkbox" name="conInsecure" id="conInsecure" value="Insecure"><label for="conInsecure"> Insecure</label> (-2 to defend someone or reject others’ influence)<br> 
+		</div>
+		
+		<div class="backstory">
+			<h2>Backstory</h2>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryOne" placeholder="Who is your supervillain parent?" style="height: 50px;"></textarea>
+			<span>Who is your supervillain parent?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryTwo" placeholder="Who told you about your parent’s true nature?" style="height: 50px;"></textarea>
+			<span>Who told you about your parent’s true nature?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryThree" placeholder="Why did you turn from your lineage to become a hero?" style="height: 50px;"></textarea>
+			<span>Why did you turn from your lineage to become a hero?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFour" placeholder="Who, outside of the team, helps you on your chosen path?" style="height: 50px;"></textarea>
+			<span>Who, outside of the team, helps you on your chosen path?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFive" placeholder="Why do you care about the team?" style="height: 50px;"></textarea>
+			<span>Why do you care about the team?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryAdd" placeholder="Additional Backstory Notes" style="height: 50px;"></textarea>
+			<span>Additional Backstory Notes</span>
+			</label>
+			<p>Once you’ve finished your backstory, introduce your character to the other players, and then determine what happened when your team first came together, the relationships between you and your teammates, and who has Influence over you.</p>
+		</div>
+		
+		<div>
+			<h2>When our team first came together...</h2>
+			<p>Someone important learned about my lineage and condemned us all. </p>
+			<label class="has-float-label">
+				<textarea rows="1" name="firstTogether" placeholder="Who? Why?" style="height: 50px;"></textarea>
+				<span>Who? Why?</span>
+			</label>
+		</div>
+
+		<h2>Relationships</h2>
+			<textarea rows="1" name="relationshipOne" class="inline" style="height: 2px;"></textarea> is the only one who understands what I’m going through; I told them which part of me I wished was more like my parent.<br>
+			My parent once fought and thrashed <textarea rows="1" name="relationshipTwo" class="inline" style="height: 2px;"></textarea>; I’ve got to find a way to make it up to them.<br>
+		
+		<div>
+			<h2>Influence</h2>
+			<p>This team may be the key to proving you’re different from your parent, but you don’t want to be defined by your peers, either. 
+				Give Influence to 2 teammates.</p>
+			<label class="has-float-label">
+				<textarea rows="1" name="influenceOver" placeholder="Who has influence over you" style="height: 50px;"></textarea>
+				<span>Who has influence over you</span>
+			</label>
+			<label class="has-float-label">
+				<textarea rows="1" name="influenceOf" placeholder="I have influence over..." style="height: 50px;"></textarea>
+				<span>I have influence over...</span>
+			</label>
+		</div>
+
+		<div class="moves">
+			<h2>Scion Moves</h2>
+			<p>(Choose two)</p>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" value="I'll show them">
+				<label for="moveOne"> I'll show them:</label> 
+				When you <b>defend someone</b> who doesn't believe in you, you can always take Influence over them, even on a miss.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveTwo" id="moveTwo" value="Changed Sides">
+				<label for="moveTwo"> Changed Sides:</label> 
+				When you mislead or trick an enemy by pretending to be on their side, roll + Danger. On a hit, they buy your charade for now. On a 7-9, choose 1. On a 10+, choose 2.
+				<ul>
+					<li>You avoid having to provide concrete evidence</li>
+					<li>You create an opportunity</li>
+					<li>You expose a weakness or flaw</li>
+				</ul>
+				On a miss, someone else watching comes to the worst possible conclusion and acts on it.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveThree" id="moveThree" value="They don't deserve forgiveness">
+				<label for="moveThree"> They don't deserve forgiveness:</label> 
+				When you accuse an enemy of being irredeemable, you can mark two conditions to take Influence over you away from them. 
+				When you <b>directly engage</b> someone who has no Influence over you, you can always choose 1 additional option, even on a miss.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFour" id="moveFour" value="Moldable">
+				<label for="moveFour"> Moldable:</label> 
+				When you <b>pierce the mask</b> of someone whose respect you crave, you can always ask "How could I gain Influence over you?", even on a miss. 
+				Take +1 ongoing to acting on the answer.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFive" id="moveFive" value="All the best stuff">
+				<label for="moveFive"> All the best stuff:</label> 
+				You've compiled access to caches of equipment and weaponry other supers have hidden in the city. When you access a cache, say whose cache it is. 
+				If it's a hero's roll + Savior. If it's a villain's roll + Danger. On a hit, you find a tool or intel useful to your situation; the GM will detail. 
+				On a 7-9, you leave evidence that you've been here. On a miss, you tripped an alarm and they're coming; prepare to explain yourself.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="White lies">
+				<label for="moveSix"> White lies:</label> 
+				When you <b>comfort or support</b> someone by telling them lies they want to hear, roll + Savior instead of + Mundane. 
+				On a hit, if they open up to you, take Influence over them.
+			</div>
+		</div>
+		
+		<h2>Respect</h2>
+		<p>Write down the names of at least two other characters whose respect you need to earn in order to differentiate yourself from your parent. You may fill in new names whenever appropriate.</p>
+		<div style="max-width: 30em;">
+			<div style="margin-bottom: 0.5em;">
+				<label style="float: left; margin-right: 1em;">Your parent’s greatest enemy: </label>
+				<span style="display: block; overflow: hidden;"><input type="text" name="enemy" style="width: 100%;"></span>
+			</div>
+			<div style="margin-bottom: 0.5em;">
+				<label>Respect: </label>
+				<input type="checkbox" name="respectAOne" id="respectAOne">
+				<input type="checkbox" name="respectATwo" id="respectATwo">
+				<input type="checkbox" name="respectAThree" id="respectAThree">
+				<input type="checkbox" name="respectAFour" id="respectAFour">
+				<label style="margin-left: 2em;">Advancement: </label>
+				<input type="checkbox" name="AAdvancement" id="AAdvancement">
+			</div>
+
+			<div style="margin-bottom: 0.5em;">
+				<label style="float: left; margin-right: 1em;">Your parent’s greatest victim: </label>
+				<span style="display: block; overflow: hidden;"><input type="text" name="victim" style="width: 100%;"></span>
+			</div>
+			<div style="margin-bottom: 0.5em;">
+				<label>Respect: </label>
+				<input type="checkbox" name="respectBOne" id="respectBOne">
+				<input type="checkbox" name="respectBTwo" id="respectBTwo">
+				<input type="checkbox" name="respectBThree" id="respectBThree">
+				<input type="checkbox" name="respectBFour" id="respectBFour">
+				<label style="margin-left: 2em;">Advancement: </label>
+				<input type="checkbox" name="BAdvancement" id="BAdvancement">
+			</div>
+
+			<div style="margin-bottom: 0.5em;">
+				<label style="float: left; margin-right: 1em;">Your personal idol: </label>
+				<span style="display: block; overflow: hidden;"><input type="text" name="idol" style="width: 100%;"></span>
+			</div>
+			<div style="margin-bottom: 0.5em;">
+				<label>Respect: </label>
+				<input type="checkbox" name="respectCOne" id="respectCOne">
+				<input type="checkbox" name="respectCTwo" id="respectCTwo">
+				<input type="checkbox" name="respectCThree" id="respectCThree">
+				<input type="checkbox" name="respectCFour" id="respectCFour">
+				<label style="margin-left: 2em;">Advancement: </label>
+				<input type="checkbox" name="CAdvancement" id="CAdvancement">
+			</div>
+
+			<div style="margin-bottom: 0.5em;">
+				<label style="float: left; margin-right: 1em;">The city’s greatest leader: </label>
+				<span style="display: block; overflow: hidden;"><input type="text" name="leader" style="width: 100%;"></span>
+			</div>
+			<div style="margin-bottom: 0.5em;">
+				<label>Respect: </label>
+				<input type="checkbox" name="respectDOne" id="respectDOne">
+				<input type="checkbox" name="respectDTwo" id="respectDTwo">
+				<input type="checkbox" name="respectDThree" id="respectDThree">
+				<input type="checkbox" name="respectDFour" id="respectDFour">
+				<label style="margin-left: 2em;">Advancement: </label>
+				<input type="checkbox" name="DAdvancement" id="DAdvancement">
+			</div>
+
+			<div style="margin-bottom: 0.5em;">
+				<label style="float: left; margin-right: 1em;">The city’s greatest hero: </label>
+				<span style="display: block; overflow: hidden;"><input type="text" name="hero" style="width: 100%;"></span>
+			</div>
+			<div style="margin-bottom: 0.5em;">
+				<label>Respect: </label>
+				<input type="checkbox" name="respectEOne" id="respectEOne">
+				<input type="checkbox" name="respectETwo" id="respectETwo">
+				<input type="checkbox" name="respectEThree" id="respectEThree">
+				<input type="checkbox" name="respectEFour" id="respectEFour">
+				<label style="margin-left: 2em;">Advancement: </label>
+				<input type="checkbox" name="EAdvancement" id="EAdvancement">
+			</div>
+
+			<div style="margin-bottom: 0.5em;">
+				<label style="float: left; margin-right: 1em;">The city’s biggest celebrity: </label>
+				<span style="display: block; overflow: hidden;"><input type="text" name="celebrity" style="width: 100%;"></span>
+			</div>
+			<div style="margin-bottom: 0.5em;">
+				<label>Respect: </label>
+				<input type="checkbox" name="respectFOne" id="respectFOne">
+				<input type="checkbox" name="respectFTwo" id="respectFTwo">
+				<input type="checkbox" name="respectFThree" id="respectFThree">
+				<input type="checkbox" name="respectFFour" id="respectFFour">
+				<label style="margin-left: 2em;">Advancement: </label>
+				<input type="checkbox" name="FAdvancement" id="BAdvancement">
+			</div>
+		</div>
+		<p>When you seek out one of the characters named above, roll + Savior. On a hit, you track them down. 
+		On a 7-9, they’re juggling their own problems, and may not have time for you. On a miss, when you find them, 
+		the situation is dire; the GM will tell you how.</p>
+		<p>If you earn Influence over the characters listed above, instead you mark 1 Respect. 
+		If you lose Influence over the characters listed above, you lose 1 Respect. 
+		If you lose 1 Respect and you have none marked, you immediately mark a condition, GM’s choice.</p>
+		<p>The first time you reach 4 Respect on an individual, take an advancement.</p>
+		<p>While you have 4 Respect on an individual:</p>
+		<ul>
+			<li>You can reject their Influence at a +3 (does not stack with the above).</li>
+			<li>You take +1 to a Label of their choice (record it next to their name).</li>
+		</ul>
+		<p>If you dip below 4 Respect on an individual, you lose those benefits.</p>
+
+		<div>
+			<h2>Moment of Truth</h2>
+			<p>People have always tried to define you by your lineage. As if from the moment you were born, you were meant to be some villain to be defeated. But...they’re right, aren’t they? That darkness is in you. So right here, right now, you’re not fighting it—you’re embracing it. Both hero and villain, and greater besides. You’re overcoming impossible odds in ways no hero would approve of, and no villain could comprehend. Of course, after seeing what you can really do when you embrace the whole of yourself, the rest of the world isn’t going to forget who you really are...</p>
+			<label for="truthUnlockOne"> Unlock 1:</label> <input type="checkbox" name="truthUnlockOne" id="truthUnlockOne"><label for="truthUsedOne"> Use 1:</label> <input type="checkbox" name="truthUsedOne" id="truthUsedOne">
+			<label for="truthUnlockTwo"> Unlock 2:</label> <input type="checkbox" name="truthUnlockTwo" id="truthUnlockTwo"><label for="truthUsedTwo"> Use 2:</label> <input type="checkbox" name="truthUsedTwo" id="truthUsedTwo">
+		</div>
+
+		<div>
+			<h2>Team Moves</h2>
+			<p>When you <b>share a triumphant celebration with someone</b>, ask them if you have earned their respect. 
+			If you have, take Influence over them and mark potential. If you have not, give them Influence over you and mark potential.</p>
+			<p>When you <b>share a vulnerability or weakness with someone</b>, 
+			ask them if they would defend you against those who mistrust you. 
+			If they say yes, clear a condition and shift Savior up and any other Label down. 
+			If they say no, mark a condition and shift Danger up and any other Label down.</p>
+		</div>
+
+		<div>
+			<h2>Potential</h2>
+			<div>
+				<input type="checkbox" name="potentialOne" id="potentialOne">
+				<input type="checkbox" name="potentialTwo" id="potentialTwo">
+				<input type="checkbox" name="potentialThree" id="potentialThree">
+				<input type="checkbox" name="potentialFour" id="potentialFour">
+				<input type="checkbox" name="potentialFive" id="potentialFive"> 
+			</div>
+		</div>
+
+		<div>
+			<h2>Advancement</h2>
+			<p>When you fill your potential track, you advance. Choose from the list below.</p>
+			<input type="checkbox" name="advanceOne" id="advanceOne"> Take another move from your playbook<br>
+			<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another move from your playbook<br>
+			<input type="checkbox" name="advanceThree" id="advanceThree"> Take a move from another playbook<br>
+			<input type="checkbox" name="advanceFour" id="advanceFour"> Take a move from another playbook<br>
+			<input type="checkbox" name="advanceFive" id="advanceFive"> Unlock your Moment of Truth<br>
+			<input type="checkbox" name="advanceSix" id="advanceSix"> Someone permanently loses Influence over you; add +1 to a Label<br>
+			<input type="checkbox" name="advanceSeven" id="advanceSeven"> Rearrange your Labels as you choose, and add +1 to a Label<br>
+			<input type="checkbox" name="advanceEight" id="advanceEight"> Take <b>The Mask</b> and a secret identity from the Janus playbook<br>
+			<p>When you’ve taken five advances from the top list, you can take advances from the list below.</p>
+			<input type="checkbox" name="advanceNine" id="advanceNine"> Unlock your Moment of Truth after it’s been used once<br>
+			<input type="checkbox" name="advanceTen" id="advanceTen"> Change playbooks<br>
+			<input type="checkbox" name="advanceEleven" id="advanceEleven"> Take an adult move<br>
+			<input type="checkbox" name="advanceTwelve" id="advanceTwelve"> Take an adult move<br>
+			<input type="checkbox" name="advanceThirteen" id="advanceThirteen"> Lock a Label, and add +1 to a Label of your choice<br>
+			<input type="checkbox" name="advanceFourteen" id="advanceFourteen"> Retire from the life or become a paragon of the city<br>
+		</div>
+
+		<h2>Other Moves</h2>
+			<textarea rows="8" name="otherMoves" style="width: 100%; height: 153px;"></textarea>
+	</form>
+</body>
+</html>

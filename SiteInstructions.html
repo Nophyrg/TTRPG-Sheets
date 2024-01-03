@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sheet Instructions</title>
+        <meta name="description" content="Masks RPG Responsive Playbooks">
+        <meta name="author" content="Joe Fulgham">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="shortcut icon" href="index_files/morb.jpg">
+        <script src="js/jquery-1.12.4.min.js"></script>
+        <script src="js/contentsheet.js"></script>
+        <link rel="stylesheet" href="css/sheet.css">
+    </head>
+
+    <div class="content">
+        <header>
+            <h1>How to Use the Sheets</h1>
+            <a href="index.html">Home</a>
+        </header>
+        <h2>Saving/Loading Data</h2>
+        <p>Fill out the playbook you're using and hit the Save button at the bottom.
+        The URL will be populated with a string of text - this is your character sheet converted to JSON and compressed.
+        Opening up the page with that URL will prompt it to load the URL and populate the form with the saved values.</p>
+        <p>If you make any changes to the sheet, you will have to click save again, generating a new URL.
+        I reccomend bookmarking these URL's so you can get easy access to them. 
+        Each time you save again, you will have to update the URL of your bookmark.</p>
+
+        <h2>Changing the picture</h2>
+        <p>Each character sheet has another field underneath the Name attributes called <i>Portrait URI</i>.
+        Click this and it will show the current link to the image being shown 
+        (by default this is the pictures hosted on the current site). 
+        You can use CTRL+A to select this and replace it with an image of your choice.
+        To do so, you will need to get the "URI" of the image - or a link that ends with an image filetype 
+        (accepted types are .png, .jpg, .jpeg, .gif, .png, .svg).</p>
+        <p>There are a variety of ways to upload your own image and get a URI for it. I'll detail two of the easiest ways below.</p>
+        <h4>Discord</h4>
+        <p>If you send a picture through Discord, it hosts the image on it's own servers, and you can get the URI to those.
+        Just click on the image in discord, and click "Open in Browser". 
+        The URL this opens in your browser of choice can be copied into the field.</p>
+        <h4>Imgur</h4>
+        <p>Go to <a href="https://imgur.com/">Imgur</a>. You can create an account if you want to, but it's not required to upload an image.
+        Click the green button that says "New Post", which will bring you to a site that allows you to upload an image.</p>
+        <p><b>IMPORTANT: </b>As soon as you upload an image it will immediately create a link for it. 
+        Make sure you want to upload the image to Imgur before choosing one.</p>
+        <p>After you've uploaded your image, right click it and choose the option "Open image in new tab".
+        The link of the new tab will be the URI you're looking for. Copy paste that into the field.</p>
+        <hr color="#4a7284">
+    </div>
+</html>

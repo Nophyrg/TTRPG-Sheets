@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Brain</title>
+	<meta name="description" content="Masks RPG Responsive Character Sheet">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="../../index_files/morb.jpg">
+	<link rel="stylesheet" href="../../../css/has-float-label.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../../../css/masks-sheet.css">
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header>
+		<h1>Masks RPG Playbook - Brain</h1>
+		<a href="../../index.html" style="text-align: center;">Home</a>
+		<a href="BrainDesc.html">Description</a>
+	</header>
+	<form id="charSheet">
+		<img src="../../Images/portrait-brain.jpg" id="charImage">
+		You've always been the smartest kid in the room. Your inventions are world-class, your tactical plans are flawless, and your mind is a steel-trap memory palace of extraordinary ideas. If only the others knew how sometimes, none of that seems to matter. None of that keeps the shadows at bay. None of that can make up for what you did...or might do.
+		<div style="white-space: nowrap;">
+			<label class="has-float-label">
+			<input type="text" name="charName" id="charName" placeholder="Hero Name">
+			<span>Hero Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="text" name="realName" id="realName" placeholder="Real Name">
+			<span>Real Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" 
+			value="https://nophyrg.github.io/Masks/Images/portrait-brain.jpg" 
+			data-original-value="https://nophyrg.github.io/Masks/Images/portrait-brain.jpg">
+			<span>Portrait URI</span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Look</h2>
+			<input type="text" name="genders" list="genders" placeholder="Gender">
+			<input type="text" name="race" list="races" placeholder="Race"> 
+			<input type="text" name="body" list="bodies" placeholder="Body"> 
+			<input type="text" name="clothing" list="clothing" placeholder="Clothing"> 
+			<input type="text" name="costume" list="costumes" placeholder="Costumes">
+			<datalist id="genders">
+				<option value="ambiguous"></option>
+				<option value="man"></option>
+				<option value="shifting"></option>
+				<option value="transgressing"></option>
+				<option value="woman"></option>
+			</datalist>
+			<datalist id="races">
+				<option value="Asian or South Asian">
+				</option><option value="Black">
+				</option><option value="Hispanic/Latino">
+				</option><option value="Indigenous">
+				</option><option value="Middle Eastern">
+				</option><option value="White"></option>
+			</datalist>
+			<datalist id="bodies">
+				<option value="tall and skinny body">
+				</option><option value="short and round body">
+				</option><option value="tight and trim body">
+				</option><option value="artiﬁcial body"></option>
+			</datalist>
+			<datalist id="clothing">
+				<option value="vintage clothing"></option>
+				<option value="scientiﬁc clothing"></option>
+				<option value="geeky clothing"></option>
+				<option value="futuristic clothing"></option>
+			</datalist>
+			<datalist id="costumes">
+				<option value="no costume"></option>
+				<option value="colorful costume"></option>
+				<option value="adaptive costume"></option>
+				<option value="robotic exo-suit"></option>
+				<option value="sleek costume"></option>
+			</datalist>
+			<label class="has-float-label">
+				<textarea rows="2" name="lookDesc" id="lookDesc" placeholder="Describe Your Look" class="description""></textarea>
+				<span>Describe your look: </span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Abilities</h2>
+			<p>You don’t have any powers of your own, besides your incredible intellect. 
+			All of your amazing abilities come from inventions that you have created. 
+			You’re best known for one particular invention that you use regularly; Choose One.</p>
+			<div class="abilities">
+				<span class="nowrap"><input type="checkbox" name="abilityOne" id="abilityOne" value="prosthetic self-altering limbs"><label for="abilityOne"> prosthetic self-altering limbs</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityTwo" id="abilityTwo" value="size-change device"><label for="abilityTwo"> size-change device</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityThree" id="abilityThree" value="force ﬁeld belt"><label for="abilityThree"> force ﬁeld belt</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityfour" id="abilityFour" value=" power armor or cyborg body"><label for="abilityFour"> power armor or cyborg body</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityFive" id="abilityFive" value="robotic sidekick"><label for="abilityFive"> robotic sidekick</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilitySix" id="abilitySix" value="hi-tech vehicle"><label for="abilitySix"> hi-tech vehicle</label></span>
+			</div>
+			<label class="has-float-label">
+				<textarea rows="2" name="abilityStyle" id="abilityStyle" placeholder="Describe how your abilities appear" class="description"></textarea>
+				<span>Describe how your abilities appear: </span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Labels</h2>
+			<p>(at character creation, add +1 wherever you choose)</p>
+			<div class="labels" style="max-width: 15em;">
+				<p>Danger <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charDanger" min="-2" max="3" value="0" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Freak <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charFreak" min="-2" max="3" value="0" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Savior <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charSavior" min="-2" max="3" value="1" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Superior <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charSuperior" min="-2" max="3" value="2" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Mundane <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charMundane" min="-2" max="3" value="-1" class="alignRight" style="margin-right: 1em;"></p>
+			</div>
+		</div>
+
+		<div class="conditions">
+			<h2 style="margin-bottom: 15px;">Conditions</h2>
+			<input type="checkbox" name="conAfraid" id="conAfraid" value="Afraid"><label for="conAfraid"> Afraid</label> (-2 to directly engage a threat)<br>
+			<input type="checkbox" name="conAngry" id="conAngry" value="Angry"><label for="conAngry"> Angry</label> (-2 to comfort or support or pierce the mask) <br>
+			<input type="checkbox" name="conGuilty" id="conGuilty" value="Guilty"><label for="conGuilty"> Guilty</label> (-2 to provoke someone or assess the situation)<br> 
+			<input type="checkbox" name="conHopeless" id="conHopeless" value="Hopeless"><label for="conHopeless"> Hopeless</label> (-2 to unleash your powers)<br> 
+			<input type="checkbox" name="conInsecure" id="conInsecure" value="Insecure"><label for="conInsecure"> Insecure</label> (-2 to defend someone or reject others’ influence)<br> 
+		</div>
+		
+		<div class="backstory">
+			<h2>Backstory</h2>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryOne" placeholder="How did you ﬁrst reveal your genius to your friends or family?" style="height: 50px;"></textarea>
+			<span>How did you ﬁrst reveal your genius to your friends or family?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryTwo" placeholder="Why did you decide to use your intellect for the beneﬁt of others?" style="height: 50px;"></textarea>
+			<span>Why did you decide to use your intellect for the beneﬁt of others?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryThree" placeholder="What accident or misﬁre taught you some sense of humility or responsibility?" style="height: 50px;"></textarea>
+			<span>What accident or misﬁre taught you some sense of humility or responsibility?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFour" placeholder="Who helped you realize you need other people?" style="height: 50px;"></textarea>
+			<span>Who helped you realize you need other people?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFive" placeholder="Why do you care about the team?" style="height: 50px;"></textarea>
+			<span>Why do you care about the team?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryAdd" placeholder="Additional Backstory Notes" style="height: 50px;"></textarea>
+			<span>Additional Backstory Notes</span>
+			</label>
+			<p>Once you’ve finished your backstory, introduce your character to the other players, and then determine what happened when your team first came together, the relationships between you and your teammates, and who has Influence over you.</p>
+		</div>
+		
+		<div>
+			<h2>When our team first came together...</h2>
+			<p>I created something lasting and beneficial for the whole team. </p>
+			<label class="has-float-label">
+				<textarea rows="1" name="firstTogether" placeholder="What was it?" style="height: 50px;"></textarea>
+				<span>What was it?</span>
+			</label>
+		</div>
+
+		<h2>Relationships</h2>
+			You told <textarea rows="1" name="relationshipOne" class="inline" style="height: 2px;"></textarea> about your shame and asked them for their confidence.<br>
+			You wish you could be a better hero, more like <textarea rows="1" name="relationshipTwo" class="inline" style="height: 2px;"></textarea>.<br>
+		
+		<div>
+			<h2>Influence</h2>
+			<p>You need these people as much as they need you. Give Influence to two of your teammates.</p>
+			<label class="has-float-label">
+				<textarea rows="1" name="influenceOver" placeholder="Who has influence over you" style="height: 50px;"></textarea>
+				<span>Who has influence over you</span>
+			</label>
+			<label class="has-float-label">
+				<textarea rows="1" name="influenceOf" placeholder="I have influence over..." style="height: 50px;"></textarea>
+				<span>I have influence over...</span>
+			</label>
+		</div>
+
+		<div class="moves">
+			<h2>Brain Moves</h2>
+			<p>(Choose three)</p>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" value="Above the fray">
+				<label for="moveOne"> Above the fray:</label> 
+				Above the fray: When you <b>enter battle as a Team against a dangerous foe</b>, 
+				if you have influence over the leader and provide tactical input, add 1 Team to the pool. 
+				When you <b>contradict the leader during battle</b>, 
+				you may return Influence over the leader to add an addational 1 Team to the pool.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveTwo" id="moveTwo" value="Mission debrief">
+				<label for="moveTwo"> Mission debrief:</label> 
+				During a debrief, when you <b>downplay your role in helping a teammate during the mission</b>, 
+				mark potential and shift Superior down and any other Label up. 
+				When you <b>exaggerate your role in helping a teammate during the mission</b>, 
+				clear a condtion and either give them Influence or lose Influence over them.<br>
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveThree" id="moveThree" value="Won&#39;t let you down">
+				<label for="moveThree"> Won't let you down:</label> 
+				When you help a teammate, you can spend 2 out of the Team pool to add +2 to their roll.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFour" id="moveFour" value="Logical angle">
+				<label for="moveFour"> Logical angle:</label> 
+				When you <b>comfort or support someone</b> by rationally pointing out their mistakes so they can do better next time, 
+				roll + Superior instead of + Mundane. If they do not open up to you, mark a condition.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFive" id="moveFive" value="Scientific insight">
+				<label for="moveFive"> Scientific insight:</label> 
+				You have achieved mastery over a field of science and technology. Name it:
+				<textarea rows="1" name="mastery" class="fillblank" style="height: 2px;"></textarea><br>
+				Whenever you <b>assess the situation</b> and your field of study is directly relevant, you may ask a single follow-up question.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Always prepared">
+				<label for="moveSix"> Always prepared:</label> 
+				When you have a chance to restock your supplies, hold up to 2-gadgets. 
+				When you <b>unleash your powers</b> by producing a brand new minor invention or gadget from your supply, 
+				spend 1-gadget and roll + Superior. When you reach 0-gadgets, mark a condition..
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" value="Tactical genius">
+				<label for="moveOne"> Tactical genius:</label> 
+				Tactical genius: When you point out the obvious flaw in a known foe's plan, roll + Savior. 
+				On a hit, you're right, and another teammate (your choice) can take advantage; 
+				they get +1 ongoing to act on your information. On a 7-9, pick one:
+				<ul>
+					<li>You missed something important. The GM will tell you what.</li>
+					<li>You look like a showoff. Your chosen teammate takes Influence over you, and you lose Influence over them.</li>
+					<li>You make your teammates feel like little more than pawns. Your chosen teammate marks a condition.</li>
+				</ul>
+				On a miss, you've played into your enemy's hands; watch the trap spring.
+			</div>
+		</div>
+		
+		<h2>Your Shame</h2>
+		<p>You have a deep and abiding sense of guilt for something you have created or had a hand in creating. 
+			It could have been something you invented when you first came into your genius, or something you set into motion 
+			that you no longer have the power to stop. It may even be something beyond your ability to achieve again, 
+			this once-in-a-lifetime creation. Just as you are a world-class intellect, your shame is a world-class problem. 
+			Whatever the case may be, your role in its creation is not publicly known...yet.</p>
+		<p>What is your shame?</p>
+		<div style="max-width: 45em;">
+			<span class="nowrap"><input type="checkbox" name="shameOne" id="shameOne" value="A prototype AI"><label for="shameOne" style="margin-right: 2em;"> A prototype AI</label></span>
+			<span class="nowrap"><input type="checkbox" name="shameTwo" id="shameTwo" value="A catastrophic weapon"><label for="shameTwo" style="margin-right: 2em;"> A catastrophic weapon</label></span>
+			<span class="nowrap"><input type="checkbox" name="shameThree" id="shameThree" value="A living monstrosity"><label for="shameThree" style="margin-right: 2em;"> A living monstrosity</label></span>
+			<span class="nowrap"><input type="checkbox" name="shameFour" id="shameFour" value="A cosmic phenomenon"><label for="shameFour" style="margin-right: 2em;"> A cosmic phenomenon</label></span>
+			<span class="nowrap"><input type="checkbox" name="shameFive" id="shameFive" value="A dangerous chemical"><label for="shameFive" style="margin-right: 2em;"> A dangerous chemical</label></span>
+			<span class="nowrap"><input type="checkbox" name="shameSix" id="shameSix" value="An altered former ally"><label for="shameSix" style="margin-right: 2em;"> An altered former ally</label></span>
+		</div>
+		<p><b>Whenever you are confronted with your shame</b>, either mark a condition or shift Superior down and Danger up. 
+		If your shame is an NPC, they can never lose Influence over you.</p>
+		<p><b>At the end of every session</b>, answer the question:</p>
+		<ul><li>Did you take steps to make amends for your shame?</li></ul>
+		<p>If the answer is yes, mark potential. If the answer is no, give Influence to one of your teammates.</p>
+
+		<div>
+			<h2>Moment of Truth</h2>
+			<p>Sooner or later, all the super powers, elite training, and experience are helpless in the face of evil or disaster. 
+				That’s when somebody like you, gifted as you are with a peerless intellect, can rise to the occasion. 
+				Your plan, your invention, or your lightning-fast thought processes save the day, in a way no one else could have foreseen. 
+				Of course, after you’ve shown how different you are from them, that distance between you and the others is now that much greater. 
+				And the world is only going to pull you farther apart...</p>
+			<label for="truthUnlockOne"> Unlock 1:</label> <input type="checkbox" name="truthUnlockOne" id="truthUnlockOne"><label for="truthUsedOne"> Use 1:</label> <input type="checkbox" name="truthUsedOne" id="truthUsedOne">
+			<label for="truthUnlockTwo"> Unlock 2:</label> <input type="checkbox" name="truthUnlockTwo" id="truthUnlockTwo"><label for="truthUsedTwo"> Use 2:</label> <input type="checkbox" name="truthUsedTwo" id="truthUsedTwo">
+		</div>
+
+		<div>
+			<h2>Team Moves</h2>
+			<p>When you <b>share a triumphant celebration with someone</b>, ask them if they felt they could have done it without you. If they say yes, give Influence to them and mark a condition. If they say no, they give Influence to you.</p>
+			<p>When you <b>share a vulnerability or weakness with someone</b>, hold 2. Spend the hold 1-for-1 to clear a condition or add 1 Team to the pool when you are with them.</p>
+		</div>
+
+		<div>
+			<h2>Potential</h2>
+			<div>
+				<input type="checkbox" name="potentialOne" id="potentialOne">
+				<input type="checkbox" name="potentialTwo" id="potentialTwo">
+				<input type="checkbox" name="potentialThree" id="potentialThree">
+				<input type="checkbox" name="potentialFour" id="potentialFour">
+				<input type="checkbox" name="potentialFive" id="potentialFive"> 
+			</div>
+		</div>
+
+		<div>
+			<h2>Advancement</h2>
+			<p>When you fill your potential track, you advance. Choose from the list below.</p>
+			<input type="checkbox" name="advanceOne" id="advanceOne"> Take another move from your playbook<br>
+			<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another move from your playbook<br>
+			<input type="checkbox" name="advanceThree" id="advanceThree"> Take another move from your playbook<br>
+			<input type="checkbox" name="advanceFour" id="advanceFour"> Take a Sanctuary from the Doomed playbook<br>
+			<input type="checkbox" name="advanceFive" id="advanceFive"> Take Drives from the Beacon playbook<br>
+			<input type="checkbox" name="advanceSix" id="advanceSix"> Someone permanently loses Influence over you; add +1 to a Label<br>
+			<input type="checkbox" name="advanceSeven" id="advanceSeven"> Rearrange your Labels as you choose, and add +1 to a Label<br>
+			<input type="checkbox" name="advanceEight" id="advanceEight"> Unlock your Moment of Truth<br>
+			<p>When you’ve taken five advances from the top list, you can take advances from the list below.</p>
+			<input type="checkbox" name="advanceNine" id="advanceNine"> Unlock your Moment of Truth after it’s been used once<br>
+			<input type="checkbox" name="advanceTen" id="advanceTen"> Confront your Shame on your terms; if you survive, change playbooks<br>
+			<input type="checkbox" name="advanceEleven" id="advanceEleven"> Take an adult move<br>
+			<input type="checkbox" name="advanceTwelve" id="advanceTwelve"> Take an adult move<br>
+			<input type="checkbox" name="advanceThirteen" id="advanceThirteen"> Lock a Label, and add +1 to a Label of your choice<br>
+			<input type="checkbox" name="advanceFourteen" id="advanceFourteen"> Become a paragon of the city for however long you have left<br>
+		</div>
+
+		<h2>Other Moves</h2>
+			<textarea rows="8" name="otherMoves" style="width: 100%; height: 153px;"></textarea>
+	</form>
+</body>
+</html>

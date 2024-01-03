@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+	<title>Janus</title>
+	<meta name="description" content="Masks RPG Responsive Playbook">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="../../index_files/morb.jpg">
+	<link rel="stylesheet" href="../../../css/has-float-label.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../../../css/masks-sheet.css">
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header>
+		<h1>Masks RPG Playbook - Janus</h1>
+		<a href="../../index.html" style="text-align: center;">Home</a>
+		<a href="JanusDesc.html">Description</a>
+	</header>
+	<form id="charSheet">
+		<img src="../../Images/portrait-janus.jpg" id="charImage"><br>
+		Wake up. Breakfast. School. Work. Homework. Sleep. Repeat. It burns you up, being stuck in this life, unable to make a real difference. That is... until you put on the mask. And then, you can be someone else: a hero.
+		<div style="white-space: nowrap;">
+			<label class="has-float-label">
+			<input type="text" name="charName" id="charName" placeholder="Hero Name">
+			<span>Hero Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="text" name="realName" id="realName" placeholder="Real Name">
+			<span>Real Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" 
+			value="https://nophyrg.github.io/Masks/Images/portrait-janus.jpg" 
+			data-original-value="https://nophyrg.github.io/Masks/Images/portrait-janus.jpg">
+			<span>Portrait URI</span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Look</h2>
+			<input type="text" name="genders" list="genders" placeholder="Gender"> 
+			<input type="text" name="race" list="races" placeholder="Race"> 
+			<input type="text" name="clothing" list="clothing" placeholder="Clothing"> 
+			<input type="text" name="costume" list="costumes" placeholder="Costume"> 
+			<input type="text" name="mask" list="masks" placeholder="Mask">
+			<datalist id="genders">
+				<option value="ambiguous">
+				</option><option value="man">
+				</option><option value="shifting">
+				</option><option value="transgressing">
+				</option><option value="woman">
+			</option></datalist>
+			<datalist id="races">
+				<option value="Asian or South Asian">
+				</option><option value="Black">
+				</option><option value="Hispanic/Latino">
+				</option><option value="Indigenous">
+				</option><option value="Middle Eastern">
+				</option><option value="White">
+			</option></datalist>
+			<datalist id="clothing">
+				<option value="boring clothing">
+				</option><option value="elegant clothing">
+				</option><option value="formal clothing">
+				</option><option value="upscale clothing">
+			</option></datalist>
+			<datalist id="costumes">
+				<option value="iconic costume">
+				</option><option value="concealing costume">
+				</option><option value="distracting costume">
+				</option><option value="flashy costume">
+			</option></datalist>
+			<datalist id="masks">
+				<option value="featureless mask">
+				</option><option value="helmet">
+				</option><option value="character mask">
+				</option><option value="small mask">
+				</option><option value="hood">
+				</option><option value="full disguise">
+			</option></datalist>
+			<label class="has-float-label">
+				<textarea rows="2" name="lookDesc" id="lookDesc" placeholder="Describe Your Look" class="description"></textarea>
+				<span>Describe your look: </span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Abilities</h2>
+			<p>Your appearance is unchanged by your abilities, and you can keep your powers hidden. You have heightened physical abilities (strength, agility, toughness), and choose two unique abilities:</p>
+			<div class="abilities">
+				<span class="nowrap">
+					<input type="checkbox" name="abilityOne" id="abilityOne" value="rodent/insect control">
+					<label for="abilityOne">
+					<select name="abilityOneOption">
+						<option value="Rodent control">Rodent control</option>
+						<option value="Insect control">Insect control</option>
+					</select></label>
+				</span>
+				<span class="nowrap">
+					<input type="checkbox" name="abilityTwo" id="abilityTwo" value="bone generation, venom, or webs">
+					<label for="abilityTwo">
+					<select name="abilityTwoOption">
+						<option value="Bone generation">Bone generation</option>
+						<option value="Venom">Venom</option>
+						<option value="Webs">Webs</option>
+					</select></label>
+				</span>
+				<span class="nowrap"><input type="checkbox" name="abilityThree" id="abilityThree" value="energy absorption"><label for="abilityThree"> energy absorption</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityfour" id="abilityFour" value=" supernatural senses"><label for="abilityFour"> supernatural senses</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityFive" id="abilityFive" value="impossible mobility"><label for="abilityFive"> impossible mobility</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilitySix" id="abilitySix" value="substance mimicry"><label for="abilitySix"> substance mimicry</label></span>
+			</div>
+			<label class="has-float-label">
+				<textarea rows="2" name="abilityStyle" id="abilityStyle" placeholder="Describe how your abilities appear" class="description"></textarea>
+				<span>Describe how your abilities appear: </span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Labels</h2>
+			<p>(at character creation, add +1 wherever you choose)</p>
+			<div class="labels" style="max-width: 15em;">
+				<p>Danger <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charDanger" min="-2" max="3" value="0" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Freak <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charFreak" min="-2" max="3" value="-1" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Savior <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charSavior" min="-2" max="3" value="0" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Superior <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charSuperior" min="-2" max="3" value="0" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Mundane <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charMundane" min="-2" max="3" value="3" class="alignRight" style="margin-right: 1em;"></p>
+			</div>
+		</div>
+
+		<div class="conditions">
+			<h2>Conditions</h2>
+			<input type="checkbox" name="conAfraid" id="conAfraid" value="Afraid"><label for="conAfraid"> Afraid</label> (-2 to directly engage a threat)<br>
+			<input type="checkbox" name="conAngry" id="conAngry" value="Angry"><label for="conAngry"> Angry</label> (-2 to comfort or support or pierce the mask) <br>
+			<input type="checkbox" name="conGuilty" id="conGuilty" value="Guilty"><label for="conGuilty"> Guilty</label> (-2 to provoke someone or assess the situation)<br> 
+			<input type="checkbox" name="conHopeless" id="conHopeless" value="Hopeless"><label for="conHopeless"> Hopeless</label> (-2 to unleash your powers)<br> 
+			<input type="checkbox" name="conInsecure" id="conInsecure" value="Insecure"><label for="conInsecure"> Insecure</label> (-2 to defend someone or reject others’ influence)<br> 
+		</div>
+
+		<div class="backstory">
+			<h2>Backstory</h2>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryOne" placeholder="When did you first put on the mask? Why?" style="height: 46px;"></textarea>
+			<span>When did you first put on the mask? Why?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryTwo" placeholder="Why do you keep a secret identity?" style="height: 46px;"></textarea>
+			<span>Why do you keep a secret identity?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryThree" placeholder="Who, outside of the team, knows about your dual identity?" style="height: 46px;"></textarea>
+			<span>Who, outside of the team, knows about your dual identity?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFour" placeholder="Who thinks the worst of your masked identity?" style="height: 46px;"></textarea>
+			<span>Who thinks the worst of your masked identity?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFive" placeholder="Why do you care about the team?" style="height: 46px;"></textarea>
+			<span>Why do you care about the team?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryAdd" placeholder="Additional Backstory Notes" style="height: 50px;"></textarea>
+			<span>Additional Backstory Notes</span>
+			</label>
+			<p>Once you’ve finished your backstory, introduce your character to the other players, and then determine what happened when your team first came together, the relationships between you and your teammates, and who has Influence over you.</p>
+		</div>
+
+		<div>
+			<h2>When our team first came together...</h2>
+			<p>We saved the life of someone important, either to the city or to us. </p>
+			<label class="has-float-label">
+				<textarea rows="2" name="firstTogether" placeholder="Who was it? Why are they important?" style="height: 65px;"></textarea>
+				<span>Who was it? Why are they important?</span>
+			</label>
+		</div>
+		
+		<h2>Relationships</h2>
+			<textarea rows="1" name="relationshipOne" class="inline" style="height: inherit;"></textarea> knew you from your civilian life first.<br>
+			You refused to tell <textarea rows="1" name="relationshipTwo" class="inline" style="height: inherit;"></textarea> your secret identity when they asked.<br>
+		
+		<div>
+			<h2>Influence</h2>
+			<p>You look up to your teammates; they seem to have this superhero thing figured out. Give two of them Influence over you.</p>
+			<label class="has-float-label">
+				<textarea rows="1" name="influenceOver" placeholder="Who has influence over you" style="height: 50px;"></textarea>
+				<span>Who has influence over you</span>
+			</label>
+			<label class="has-float-label">
+				<textarea rows="1" name="influenceOf" placeholder="I have influence over..." style="height: 50px;"></textarea>
+				<span>I have influence over...</span>
+			</label>
+		</div>
+		
+		<div class="moves">
+			<h2>Janus Moves</h2>
+			<p>(You start with The Mask and two others of your choice)</p>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" checked="" value="The Mask"><label for="moveOne"> The Mask:</label> You wear a mask and hide your real identity. Choose what Label you try to embody while wearing your mask: 
+					<select id="maskType" name="maskType">
+						<option value="Danger">Danger</option>
+						<option value="Freak">Freak</option>
+						<option value="Savior">Savior</option>
+						<option value="Superior">Superior</option>
+					</select><br>
+					Once per session, you can affirm either your heroic or secret identity to switch your Mundane with your mask’s Label. When you reveal your secret identity to someone who didn’t know it already, mark potential.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveTwo" id="moveTwo" value="Game face"><label for="moveTwo"> Game face:</label> 
+				When you commit yourself to save someone or defeat a terrible enemy, mark a condition and take +1 ongoing to all rolls in direct pursuit of that goal. At the end of any scene in which you don’t make progress towards that goal, mark a condition. When you fulfill your goal, mark potential.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveThree" id="moveThree" value="I am what you see"><label for="moveThree"> I am what you see:</label> 
+				When you spend time talking to someone about your identity, you can ask them which Label they want to impose on you; their player will tell you honestly. If you accept what they tell you, take +1 forward and either mark potential or clear a condition.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFour" id="moveFour" value="Mild-mannered"><label for="moveFour"> Mild-mannered:</label> 
+				When you try to use your civilian identity to deceive, trick, or slip past someone, roll +Mundane. On a hit they buy your facade. On a 7-9, choose one:
+				<ul><li class="choices">you’re still under observation</li>
+					<li class="choices">you leave something incriminating behind</li>
+					<li class="choices">you’re forced to make a fool of yourself to sell it</li>
+				</ul>
+					On a miss, one of your civilian obligations rears its ugly head.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFive" id="moveFive" value="I’ll save you!"><label for="moveFive"> I’ll save you!:</label> 
+				You’re willing to pay high costs to keep your loved ones safe. Reveal your secret identity to someone watching or mark a condition to defend a loved one as if you rolled a 12+.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Dangerous web"><label for="moveSix"> Dangerous web:</label> 
+				When you reveal a trap you’ve left for someone using your powers, roll + your mask’s Label. On a hit, your opponent trips into it, and you get an opening or opportunity against them. On a 10+, take +1 forward to pursuing it. On a miss, the trap inadvertently leads to a dangerous escalation..
+			</div>
+		</div>
+
+		<div>
+			<h2>Secret Identity</h2>
+			<p>Your mundane life comes with a series of obligations. Choose a total of three obligations.</p>
+			<select name="obligationOne">
+				<option value="-">-</option>
+				<optgroup label="Jobs">
+					<option value="Barista">Barista</option>
+					<option value="Intern">Intern</option>
+					<option value="Host/ess">Host/ess</option>
+					<option value="Salesperson">Salesperson</option>
+					<option value="Delivery person">Delivery person</option>
+					<option value="Fast-food worker">Fast-food worker</option>
+					<option value="Babysitter">Babysitter</option>
+					<option value="Dishwasher">Dishwasher</option>
+					<option value="Tech support">Tech support</option>
+					<option value="Waitress/er">Waitress/er</option>
+				</optgroup>
+				<optgroup label="School">
+					<option value="Schoolwork">Schoolwork</option>
+					<option value="Athletic team">Athletic team</option>
+					<option value="Chess club">Chess club</option>
+					<option value="Photography Club">Photography Club</option>
+					<option value="Student Government">Student Government</option>
+				</optgroup>
+				<optgroup label="Home">
+					<option value="Caring for someone">Caring for someone</option>
+					<option value="Household chores">Household chores</option>
+					<option value="Paying bills">Paying bills</option>
+					<option value="Surrogate parenting">Surrogate parenting</option>
+				</optgroup>
+				<optgroup label="Social">
+					<option value="Significant other">Significant other</option>
+					<option value="Best friend">Best friend</option>
+					<option value="Popularity">Popularity</option>
+					<option value="Close relative">Close relative</option>
+					<option value="Coach/teacher">Coach/teacher</option>
+				</optgroup>
+			</select>
+			<select name="obligationTwo">
+				<option disabled="" selected="" value="">-</option>
+				<optgroup label="Jobs">
+					<option value="Barista">Barista</option>
+					<option value="Intern">Intern</option>
+					<option value="Host/ess">Host/ess</option>
+					<option value="Salesperson">Salesperson</option>
+					<option value="Delivery person">Delivery person</option>
+					<option value="Fast-food worker">Fast-food worker</option>
+					<option value="Babysitter">Babysitter</option>
+					<option value="Dishwasher">Dishwasher</option>
+					<option value="Tech support">Tech support</option>
+					<option value="Waitress/er">Waitress/er</option>
+				</optgroup>
+				<optgroup label="School">
+					<option value="Schoolwork">Schoolwork</option>
+					<option value="Athletic team">Athletic team</option>
+					<option value="Chess club">Chess club</option>
+					<option value="Photography Club">Photography Club</option>
+					<option value="Student Government">Student Government</option>
+				</optgroup>
+				<optgroup label="Home">
+					<option value="Caring for someone">Caring for someone</option>
+					<option value="Household chores">Household chores</option>
+					<option value="Paying bills">Paying bills</option>
+					<option value="Surrogate parenting">Surrogate parenting</option>
+				</optgroup>
+				<optgroup label="Social">
+					<option value="Significant other">Significant other</option>
+					<option value="Best friend">Best friend</option>
+					<option value="Popularity">Popularity</option>
+					<option value="Close relative">Close relative</option>
+					<option value="Coach/teacher">Coach/teacher</option>
+				</optgroup>
+			</select>
+			<select name="obligationThree">
+				<option disabled="" selected="" value="">-</option>
+				<optgroup label="Jobs">
+					<option value="Barista">Barista</option>
+					<option value="Intern">Intern</option>
+					<option value="Host/ess">Host/ess</option>
+					<option value="Salesperson">Salesperson</option>
+					<option value="Delivery person">Delivery person</option>
+					<option value="Fast-food worker">Fast-food worker</option>
+					<option value="Babysitter">Babysitter</option>
+					<option value="Dishwasher">Dishwasher</option>
+					<option value="Tech support">Tech support</option>
+					<option value="Waitress/er">Waitress/er</option>
+				</optgroup>
+				<optgroup label="School">
+					<option value="Schoolwork">Schoolwork</option>
+					<option value="Athletic team">Athletic team</option>
+					<option value="Chess club">Chess club</option>
+					<option value="Photography Club">Photography Club</option>
+					<option value="Student Government">Student Government</option>
+				</optgroup>
+				<optgroup label="Home">
+					<option value="Caring for someone">Caring for someone</option>
+					<option value="Household chores">Household chores</option>
+					<option value="Paying bills">Paying bills</option>
+					<option value="Surrogate parenting">Surrogate parenting</option>
+				</optgroup>
+				<optgroup label="Social">
+					<option value="Significant other">Significant other</option>
+					<option value="Best friend">Best friend</option>
+					<option value="Popularity">Popularity</option>
+					<option value="Close relative">Close relative</option>
+					<option value="Coach/teacher">Coach/teacher</option>
+				</optgroup>
+			</select>
+			<label class="has-float-label">
+				<textarea rows="2" name="secretidNotes" id="secretidNotes" placeholder="Secret Identity notes" style="height: 65px;"></textarea>
+				<span>Secret Identity notes</span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Moment of Truth</h2>
+			<p>The mask is a lie, and some piece of you has always known that. Doesn’t matter if others can see it. You’re the one that can do the impossible. Mask off. Costume on. And you’re going to save the damn day. Of course, you better hope nobody nasty is watching...</p>
+			<label for="truthUnlockOne"> Unlock 1:</label> <input type="checkbox" name="truthUnlockOne" id="truthUnlockOne"><label for="truthUsedOne"> Use 1:</label> <input type="checkbox" name="truthUsedOne" id="truthUsedOne">
+			<label for="truthUnlockTwo"> Unlock 2:</label> <input type="checkbox" name="truthUnlockTwo" id="truthUnlockTwo"><label for="truthUsedTwo"> Use 2:</label> <input type="checkbox" name="truthUsedTwo" id="truthUsedTwo">
+		</div>
+
+		<div>
+			<h2>Team Moves</h2>
+			<p>When you share a triumphant celebration with someone, ask them if they see you as the person wearing the mask or the person underneath. If the former, mark potential and clear a condition. If the latter, take Influence over them if you reveal yourself.</p>
+			<p>When you share a vulnerability or weakness with someone, tell them a secret about who you really are. Give them Influence, and shift your Mundane up and your mask’s Label down.</p>
+		</div>
+
+		<div>
+			<h2>Potential</h2>
+			<div><input type="checkbox" name="potentialOne" id="potentialOne">
+				<input type="checkbox" name="potentialTwo" id="potentialTwo">
+				<input type="checkbox" name="potentialThree" id="potentialThree">
+				<input type="checkbox" name="potentialFour" id="potentialFour">
+				<input type="checkbox" name="potentialFive" id="potentialFive"> 
+			</div>
+		</div>
+
+		<div>
+			<h2>Advancement</h2>
+			<p>When you fill your potential track, you advance. Choose from the list below.</p>
+			<input type="checkbox" name="advanceOne" id="advanceOne"> Take another move from your playbook<br>
+			<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another move from your playbook<br>
+			<input type="checkbox" name="advanceThree" id="advanceThree"> Take a move from another playbook<br>
+			<input type="checkbox" name="advanceFour" id="advanceFour"> Take a move from another playbook<br>
+			<input type="checkbox" name="advanceFive" id="advanceFive"> Change your masks's Label; add +1 to your masks' new Label<br>
+			<input type="checkbox" name="advanceSix" id="advanceSix"> Someone permanently loses Influence over you; add +1 to a Label<br>
+			<input type="checkbox" name="advanceSeven" id="advanceSeven"> Take drives from the Beacon's playbook<br>
+			<input type="checkbox" name="advanceEight" id="advanceEight"> Unlock your Moment of Truth<br>
+			<p>When you’ve taken five advances from the top list, you can take advances from the list below.</p>
+			<input type="checkbox" name="advanceNine" id="advanceNine"> Unlock your Moment of Truth after it’s been used once<br>
+			<input type="checkbox" name="advanceTen" id="advanceTen"> Change playbooks<br>
+			<input type="checkbox" name="advanceEleven" id="advanceEleven"> Take an adult move<br>
+			<input type="checkbox" name="advanceTwelve" id="advanceTwelve"> Take an adult move<br>
+			<input type="checkbox" name="advanceThirteen" id="advanceThirteen"> Lock a Label, and add +1 to a Label of your choice<br>
+			<input type="checkbox" name="advanceFourteen" id="advanceFourteen"> Retire from the life or become a paragon of the city<br>
+		</div>
+
+		<h2>Notes / Other Moves</h2>
+			<textarea rows="8" name="otherMoves" style="width: 100%; height: 127px;"></textarea>
+	</form>
+</body>
+</html>

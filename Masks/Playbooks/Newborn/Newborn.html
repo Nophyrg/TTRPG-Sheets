@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Newborn</title>
+	<meta name="description" content="Masks RPG Responsive Character Sheet">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="../../index_files/morb.jpg">
+	<link rel="stylesheet" href="../../../css/has-float-label.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../../../css/masks-sheet.css">
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header>
+		<h1>Masks RPG Playbook - Newborn</h1>
+		<a href="../../index.html" style="text-align: center;">Home</a>
+		<a href="NewbornDesc.html">Description</a>
+	</header>
+	<form id="charSheet">
+		<img src="../../Images/portrait-newborn.jpg" id="charImage"><br>
+		You're a brand new being, created through scientific inquiry, feat of engineering, or random chance. This world is all new to you, full of wonder and adventure. It's not easy, though - eveyone has an opinion about who you are and what you should do. It's time to find out for yourself who you really are. 
+		<div style="white-space: nowrap;">
+			<label class="has-float-label">
+			<input type="text" name="charName" id="charName" placeholder="Hero Name">
+			<span>Hero Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="text" name="realName" id="realName" placeholder="Real Name">
+			<span>Real Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" 
+			value="https://nophyrg.github.io/Masks/Images/portrait-newborn.jpg" 
+			data-original-value="https://nophyrg.github.io/Masks/Images/portrait-newborn.jpg">
+			<span>Portrait URI</span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Look</h2>
+			<input type="text" name="genders" list="genders" placeholder="Gender">
+			<input type="text" name="race" list="races" placeholder="Race"> 
+			<input type="text" name="skin" list="skin" placeholder="Skin"> 
+			<input type="text" name="clothing" list="clothing" placeholder="Clothing"> 
+			<input type="text" name="costume" list="costumes" placeholder="Costumes">
+			<datalist id="genders">
+				<option value="ambiguous"></option>
+				<option value="man"></option>
+				<option value="shifting"></option>
+				<option value="transgressing"></option>
+				<option value="woman"></option>
+			</datalist>
+			<datalist id="races">
+				<option value="Asian or South Asian">
+				</option><option value="Black">
+				</option><option value="Hispanic/Latino">
+				</option><option value="Indigenous">
+				</option><option value="Middle Eastern">
+				</option><option value="White"></option>
+			</datalist>
+			<datalist id="skin">
+				<option value="crystal skin">
+				</option><option value="metal skin">
+				</option><option value="green skin">
+				</option><option value="human skin"></option>
+			</datalist>
+			<datalist id="clothing">
+				<option value="mismatched clothing"></option>
+				<option value="concealing clothing"></option>
+				<option value="immaculate clothing"></option>
+				<option value="plain clothing"></option>
+			</datalist>
+			<datalist id="costumes">
+				<option value="prototype uniform"></option>
+				<option value="over the top costume"></option>
+				<option value="your own skin"></option>
+				<option value="unnerving costume"></option>
+				<option value="no costume"></option>
+			</datalist>
+		</div>
+		<label class="has-float-label">
+			<textarea rows="2" name="lookDesc" id="lookDesc" placeholder="Describe Your Look" class="description"></textarea>
+			<span>Describe your look: </span>
+		</label>
+
+		<div>
+			<h2>Abilities</h2>
+			<p>Your powers are based on your unique physical configuration. Choose two and describe how they are part of your body.</p>
+			<div class="abilities">
+				<span class="nowrap"><input type="checkbox" name="abilityOne" id="abilityOne" value="elemental form"><label for="abilityOne"> elemental form</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityTwo" id="abilityTwo" value="sonic bursts"><label for="abilityTwo"> sonic bursts</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityThree" id="abilityThree" value="super durability and strength"><label for="abilityThree"> super durability and strength</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityfour" id="abilityFour" value="solid light projection"><label for="abilityFour"> solid light projection</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityFive" id="abilityFive" value="fantastic elasticity"><label for="abilityFive"> fantastic elasticity</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilitySix" id="abilitySix" value="thermal control"><label for="abilitySix"> thermal control</label></span>
+			</div>
+			<label class="has-float-label">
+				<textarea rows="2" name="abilityStyle" id="abilityStyle" placeholder="Describe how your abilities appear" class="description"></textarea>
+				<span>Describe how your abilities appear: </span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Labels</h2>
+			<p>(at character creation, add +1 wherever you choose)</p>
+			<div class="labels" style="max-width: 15em;">
+				<p>Danger <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charDanger" min="-2" max="3" value="1" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Freak <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charFreak" min="-2" max="3" value="2" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Savior <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charSavior" min="-2" max="3" value="0" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Superior <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charSuperior" min="-2" max="3" value="1" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Mundane <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charMundane" min="-2" max="3" value="-2" class="alignRight" style="margin-right: 1em;"></p>
+			</div>
+		</div>
+
+		<div class="conditions">
+			<h2 style="margin-bottom: 15px;">Conditions</h2>
+			<input type="checkbox" name="conAfraid" id="conAfraid" value="Afraid"><label for="conAfraid"> Afraid</label> (-2 to directly engage a threat)<br>
+			<input type="checkbox" name="conAngry" id="conAngry" value="Angry"><label for="conAngry"> Angry</label> (-2 to comfort or support or pierce the mask) <br>
+			<input type="checkbox" name="conGuilty" id="conGuilty" value="Guilty"><label for="conGuilty"> Guilty</label> (-2 to provoke someone or assess the situation)<br> 
+			<input type="checkbox" name="conHopeless" id="conHopeless" value="Hopeless"><label for="conHopeless"> Hopeless</label> (-2 to unleash your powers)<br> 
+			<input type="checkbox" name="conInsecure" id="conInsecure" value="Insecure"><label for="conInsecure"> Insecure</label> (-2 to defend someone or reject others’ influence)<br> 
+		</div>
+		
+		<div class="backstory">
+			<h2>Backstory</h2>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryOne" placeholder="Who created you, and why?" style="height: 50px;"></textarea>
+			<span>Who created you, and why?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryTwo" placeholder="How are you different from humans?" style="height: 50px;"></textarea>
+			<span>How are you different from humans?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryThree" placeholder="Who, outside of the team, is your caretaker?" style="height: 50px;"></textarea>
+			<span>Who, outside of the team, is your caretaker?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFour" placeholder="What about humanity fascinates you the most?" style="height: 50px;"></textarea>
+			<span>What about humanity fascinates you the most?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFive" placeholder="Why do you care about the team?" style="height: 50px;"></textarea>
+			<span>Why do you care about the team?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryAdd" placeholder="Additional Backstory Notes" style="height: 50px;"></textarea>
+			<span>Additional Backstory Notes</span>
+			</label>
+			<p>Once you’ve finished your backstory, introduce your character to the other players, and then determine what happened when your team first came together, the relationships between you and your teammates, and who has Influence over you.</p>
+		</div>
+		
+		<div>
+			<h2>When our team first came together...</h2>
+			<p>The team discovered you during the incident; thanks to them, you reached the outside world and helped in the fight.</p>
+			<label class="has-float-label">
+				<textarea rows="1" name="firstTogether" placeholder="Where and how did they find you?" style="height: 50px;"></textarea>
+				<span>Where and how did they find you?</span>
+			</label>
+			<label class="has-float-label">
+				<textarea rows="1" name="firstTogether" placeholder="Who gave you your first nickname?" style="height: 50px;"></textarea>
+				<span>Who gave you your first nickname?</span>
+			</label>
+		</div>
+
+		<h2>Relationships</h2>
+			<textarea rows="1" name="relationshipOne" class="inline" style="height: 2px;"></textarea> is an exemplary human; they show you around and tell you how things work.<br>
+			The behavior of <textarea rows="1" name="relationshipTwo" class="inline" style="height: 2px;"></textarea> confuses you again and again; you’re determined to understand humanity better by studying them.<br>
+
+		<div>
+			<h2>Influence</h2>
+			<p>You’re receptive to how people think and behave around you. Give Influence to all of your teammates.</p>
+			<label class="has-float-label">
+				<textarea rows="1" name="influenceOver" placeholder="Who has influence over you" style="height: 50px;"></textarea>
+				<span>Who has influence over you</span>
+			</label>
+			<label class="has-float-label">
+				<textarea rows="1" name="influenceOf" placeholder="I have influence over..." style="height: 50px;"></textarea>
+				<span>I have influence over...</span>
+			</label>
+		</div>
+
+		<div class="moves">
+			<h2>Newborn Moves</h2>
+			<p>(Choose two)</p>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" value="Not from around here">
+				<label for="moveOne">Not from around here:</label> 
+				When you act clueless, goofy, or confused to get out of a sticky mundane situation, roll + Freak. 
+				On a hit, you create an opportunity, a distraction, or a plausible excuse. 
+				On a 7-9, you also feel all the weight of playing the clown and of the people staring at you. 
+				The GM shifts one of your Labels up and one down. On a miss, no one is fooled, and you’ve put yourself in their crosshairs.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveTwo" id="moveTwo" value="Thermodynamic miracle">
+				<label for="moveTwo">Thermodynamic miracle:</label> 
+				When you <b>comfort or support someone</b> by telling them what makes them unique, roll + Freak instead of Mundane. 
+				If they open up to you, shift Freak up and Mundane down. If they don’t, mark a condition.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveThree" id="moveThree" value="A mind of their own">
+				<label for="moveThree">A mind of their own:</label> 
+				Your powers evolve and mutate. When you are facing an obstacle or threat that your powers would not be able to deal with, 
+				you can mark a condition to gain brand new abilities adapted to the situation. You lose these new powers once the danger is gone.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFour" id="moveFour" value="Damage">
+				<label for="moveFour">Damage:</label>
+				You get an additional condition called Damaged. While marked, take +1 to <b>take a powerful blow</b>. 
+				To clear the Damaged condition, you need time, external help, or special equipment or abilities.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFive" id="moveFive" value="Regeneration">
+				<label for="moveFive">Regeneration:</label> 
+				When you’re taken out, you can trigger an emergency regeneration process. If you do, 
+				your body undergoes an unpredictable transformation, and in mere moments, you’re back on your feet and ready to fight. 
+				Clear three conditions and choose three from the list below:
+				<ul>
+					<li>Change your gender identity or presentation</li>
+					<li>Change your physical appearance</li>
+					<li>Forget all your lessons</li>
+					<li>Lose an important memory of a teammate; they lose Influence over you</li>
+					<li>Swap an ability with another one from the Newborn playbook</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div>
+			<h2>A Blank Slate</h2>
+			<p>You were created with a basic understanding of the world. When you learn something that helps you make sense of the world, 
+			write it down as a lesson. Fill in two lessons when you create your character; fill in the other two when you’ve learned those lessons during play.</p>
+			<div>
+				<input type="checkbox" name="lessonOne" id="lessonOne" value="I am">
+				I am
+				<input type="text" name="lessonOneResponse" id="lessonOneResponse">
+			</div>
+			<div>
+				<input type="checkbox" name="lessonTwo" id="lessonTwo" value="A superhero should">
+				A superhero should
+				<input type="text" name="lessonTwoResponse" id="lessonTwoResponse">
+			</div>
+			<div>
+				<input type="checkbox" name="lessonThree" id="lessonThree" value="Always">
+				Always
+				<input type="text" name="lessonThreeResponse" id="lessonThreeResponse">
+			</div>
+			<div>
+				<input type="checkbox" name="lessonFour" id="lessonFourf" value="Never">
+				Never
+				<input type="text" name="lessonFourResponse" id="lessonFourResponse">
+			</div>
+			<p>When you <b>embody one of your lessons</b>, shift one Label up and one Label down, your choice. 
+				If you cause a misunderstanding, collateral damage, or unintended consequences in the process, mark potential. 
+				When you <b>reject one of your lessons</b>, reject its Influence as if it were an NPC. If
+				you choose to have it lose Influence over you, erase that lesson and write a new one in its stead.
+			</p>
+			<p>When you approach your creator or caretakers with a problem, tell them what obstacle you face
+			or what you need to achieve, and they will offer you something you need. The GM chooses one:</p>
+			<ul>
+				<li>secret information</li>
+				<li>a way to temporarily boost or expand your powers</li>
+				<li>access to instruments, weapons, or resources</li>
+				<li>official and explicit backing</li>
+			</ul>
+			<p>If you accept their help, they rewrite one of your lessons for you.</p>
+		</div>
+
+		<div>
+			<h2>Moment of Truth</h2>
+			<p>Something snaps into focus, and suddenly you’re a full thing, true and complete. 
+			You’d never have known how fragmented you were before, if not for here, this moment. 
+			You’re not a series of individual lessons. You’re not a series of subroutines and programs. 
+			You’re...a person. This must be what it’s like to be...human. And this fullness? 
+			It gives you a control over yourself, a unity of purpose you’ve never experienced before. 
+			Of course, now that you’re showing off all your potential, it’s only a matter of time before someone comes forward to reduce you to a machine again...</p>
+			<label for="truthUnlockOne"> Unlock 1:</label> <input type="checkbox" name="truthUnlockOne" id="truthUnlockOne"><label for="truthUsedOne"> Use 1:</label> <input type="checkbox" name="truthUsedOne" id="truthUsedOne">
+			<label for="truthUnlockTwo"> Unlock 2:</label> <input type="checkbox" name="truthUnlockTwo" id="truthUnlockTwo"><label for="truthUsedTwo"> Use 2:</label> <input type="checkbox" name="truthUsedTwo" id="truthUsedTwo">
+		</div>
+
+		<div>
+			<h2>Team Moves</h2>
+			<p>When you <b>share a triumphant celebration with someone</b>, ask them what makes them proud or happy about the actions they took and write a lesson based on it, either filling an empty slot or replacing an existing lesson.</p>
+			<p>When you <b>share a vulnerability or weakness with someone</b>, if their response helps you understand human feelings and problems, mark potential. If their response confuses or offends you, shift your Freak up and your Mundane down</p>
+		</div>
+
+		<div>
+			<h2>Potential</h2>
+			<div>
+				<input type="checkbox" name="potentialOne" id="potentialOne">
+				<input type="checkbox" name="potentialTwo" id="potentialTwo">
+				<input type="checkbox" name="potentialThree" id="potentialThree">
+				<input type="checkbox" name="potentialFour" id="potentialFour">
+				<input type="checkbox" name="potentialFive" id="potentialFive"> 
+			</div>
+		</div>
+
+		<div>
+			<h2>Advancement</h2>
+			<p>When you fill your potential track, you advance. Choose from the list below.</p>
+			<input type="checkbox" name="advanceOne" id="advanceOne"> Take another move from your playbook<br>
+			<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another move from your playbook<br>
+			<input type="checkbox" name="advanceThree" id="advanceThree"> Take a move from another playbook<br>
+			<input type="checkbox" name="advanceFour" id="advanceFour"> Take a move from another playbook<br>
+			<input type="checkbox" name="advanceFive" id="advanceFive"> Someone permanently loses Influence over you; add +1 to a Label<br>
+			<input type="checkbox" name="advanceSix" id="advanceSix"> Rearrange your Labels as you choose, and add +1 to a Label<br>
+			<input type="checkbox" name="advanceSeven" id="advanceSeven"> Unlock your Moment of Truth<br>
+			<input type="checkbox" name="advanceEight" id="advanceEight"> Get burn and three flares (from the Nova’s playbook)<br>
+			<p>When you’ve taken five advances from the top list, you can take advances from the list below.</p>
+			<input type="checkbox" name="advanceNine" id="advanceNine"> Unlock your Moment of Truth after it’s been used once<br>
+			<input type="checkbox" name="advanceTen" id="advanceTen"> Lock down your lessons and change playbooks<br>
+			<input type="checkbox" name="advanceEleven" id="advanceEleven"> Take an adult move<br>
+			<input type="checkbox" name="advanceTwelve" id="advanceTwelve"> Take an adult move<br>
+			<input type="checkbox" name="advanceThirteen" id="advanceThirteen"> Lock a Label, and add +1 to a Label of your choice<br>
+			<input type="checkbox" name="advanceFourteen" id="advanceFourteen"> Retire from the life or become a paragon of the city<br>
+		</div>
+
+		<h2>Other Moves</h2>
+			<textarea rows="8" name="otherMoves" style="width: 100%; height: 153px;"></textarea>
+	</form>
+</body>
+</html>

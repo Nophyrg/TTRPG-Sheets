@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Soldier</title>
+	<meta name="description" content="Masks RPG Responsive Character Sheet">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="../../index_files/morb.jpg">
+	<link rel="stylesheet" href="../../../css/has-float-label.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../../../css/masks-sheet.css">
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header>
+		<h1>Masks RPG Playbook - Soldier</h1>
+		<a href="../../index.html" style="text-align: center;">Home</a>
+		<a href="SoldierDesc.html">Description</a>
+	</header>
+	<form id="charSheet">
+		<img src="../../Images/portrait-soldier.jpg" id="charImage"><br>
+		You're an agent of something greater than you - a real force fighting to make the world a better place. Through them, you stand for something important. You just hope that, when push comes to shove, you stand for the right thing.
+		<div style="white-space: nowrap;">
+			<label class="has-float-label">
+			<input type="text" name="charName" id="charName" placeholder="Hero Name">
+			<span>Hero Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="text" name="realName" id="realName" placeholder="Real Name">
+			<span>Real Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" 
+			value="https://nophyrg.github.io/Masks/Images/portrait-soldier.jpg" 
+			data-original-value="https://nophyrg.github.io/Masks/Images/portrait-soldier.jpg">
+			<span>Portrait URI</span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Look</h2>
+			<input type="text" name="genders" list="genders" placeholder="Gender">
+			<input type="text" name="race" list="races" placeholder="Race"> 
+			<input type="text" name="body" list="bodies" placeholder="Body"> 
+			<input type="text" name="clothing" list="clothing" placeholder="Clothing"> 
+			<input type="text" name="costume" list="costumes" placeholder="Costumes">
+			<datalist id="genders">
+				<option value="ambiguous"></option>
+				<option value="man"></option>
+				<option value="shifting"></option>
+				<option value="transgressing"></option>
+				<option value="woman"></option>
+			</datalist>
+			<datalist id="races">
+				<option value="Asian or South Asian">
+				</option><option value="Black">
+				</option><option value="Hispanic/Latino">
+				</option><option value="Indigenous">
+				</option><option value="Middle Eastern">
+				</option><option value="White"></option>
+			</datalist>
+			<datalist id="bodies">
+				<option value="average body">
+				</option><option value="bulky body">
+				</option><option value="lean body">
+				</option><option value="trained body">
+				</option><option value="surprising body"></option>
+			</datalist>
+			<datalist id="clothing">
+				<option value="stylish clothing"></option>
+				<option value="comfortable clothing"></option>
+				<option value="simple clothing"></option>
+				<option value="casual clothing"></option>
+			</datalist>
+			<datalist id="costumes">
+				<option value="modern costume"></option>
+				<option value="iconic costume"></option>
+				<option value="military uniform"></option>
+				<option value="no costume"></option>
+			</datalist>
+			<label class="has-float-label">
+				<textarea rows="2" name="lookDesc" id="lookDesc" placeholder="Describe Your Look" class="description"></textarea>
+				<span>Describe your look: </span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Abilities</h2>
+			<p>A.E.G.I.S. found you before you got full control of your abilities. 
+				They helped you master your gifts, maybe even augmented them with some new tech. 
+				Now you have an opportunity to do some good, using your powers to protect and serve humanity. 
+				Choose any two of the following.</p>
+			<div class="abilities">
+				<span class="nowrap"><input type="checkbox" name="abilityOne" id="abilityOne" value="superstrength and durability"><label for="abilityOne"> superstrength and durability</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityTwo" id="abilityTwo" value="enhanced senses"><label for="abilityTwo"> enhanced senses</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityThree" id="abilityThree" value="augmented/mechanical limbs"><label for="abilityThree"> augmented/mechanical limbs</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityfour" id="abilityFour" value=" energy blasts"><label for="abilityFour"> energy blasts</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilityFive" id="abilityFive" value="a signature weapon"><label for="abilityFive"> a signature weapon</label></span>
+				<span class="nowrap"><input type="checkbox" name="abilitySix" id="abilitySix" value="an alternate/monstrous form"><label for="abilitySix"> an alternate/monstrous form</label></span>
+			</div>
+			<label class="has-float-label">
+				<textarea rows="2" name="abilityStyle" id="abilityStyle" placeholder="Describe how your abilities appear" class="description"></textarea>
+				<span>Describe how your abilities appear: </span>
+			</label>
+		</div>
+
+		<div>
+			<h2>Labels</h2>
+			<p>(at character creation, add +1 wherever you choose)</p>
+			<div class="labels" style="max-width: 15em;">
+				<p>Danger <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charDanger" min="-2" max="3" value="-1" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Freak <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charFreak" min="-2" max="3" value="0" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Savior <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charSavior" min="-2" max="3" value="2" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Superior <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charSuperior" min="-2" max="3" value="1" class="alignRight" style="margin-right: 1em;"></p>
+				<p>Mundane <label class="alignRight" style="margin-left: .25em;">Locked</label>
+					<input type="checkbox" name="lockDanger" class="alignRight">
+					<input type="number" name="charMundane" min="-2" max="3" value="0" class="alignRight" style="margin-right: 1em;"></p>
+			</div>
+		</div>
+
+		<div class="conditions">
+			<h2 style="margin-bottom: 15px;">Conditions</h2>
+			<input type="checkbox" name="conAfraid" id="conAfraid" value="Afraid"><label for="conAfraid"> Afraid</label> (-2 to directly engage a threat)<br>
+			<input type="checkbox" name="conAngry" id="conAngry" value="Angry"><label for="conAngry"> Angry</label> (-2 to comfort or support or pierce the mask) <br>
+			<input type="checkbox" name="conGuilty" id="conGuilty" value="Guilty"><label for="conGuilty"> Guilty</label> (-2 to provoke someone or assess the situation)<br> 
+			<input type="checkbox" name="conHopeless" id="conHopeless" value="Hopeless"><label for="conHopeless"> Hopeless</label> (-2 to unleash your powers)<br> 
+			<input type="checkbox" name="conInsecure" id="conInsecure" value="Insecure"><label for="conInsecure"> Insecure</label> (-2 to defend someone or reject others’ influence)<br> 
+		</div>
+		
+		<div class="backstory">
+			<h2>Backstory</h2>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryOne" placeholder="What tragedy or disaster led to you gaining your abilities?" style="height: 50px;"></textarea>
+			<span>What tragedy or disaster led to you gaining your abilities?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryTwo" placeholder="What inspired you to ofﬁcially join A.E.G.I.S.?" style="height: 50px;"></textarea>
+			<span>What inspired you to ofﬁcially join A.E.G.I.S.?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryThree" placeholder="What does A.E.G.I.S. do for the world that no one else can?" style="height: 50px;"></textarea>
+			<span>What does A.E.G.I.S. do for the world that no one else can?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFour" placeholder="Who, outside of A.E.G.I.S. and the team, connects you to the civilian world?" style="height: 50px;"></textarea>
+			<span>Who, outside of A.E.G.I.S. and the team, connects you to the civilian world?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFive" placeholder="Why do you care about the team?" style="height: 50px;"></textarea>
+			<span>Why do you care about the team?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryAdd" placeholder="Additional Backstory Notes" style="height: 50px;"></textarea>
+			<span>Additional Backstory Notes</span>
+			</label>
+			<p>Once you’ve finished your backstory, introduce your character to the other players, and then determine what happened when your team first came together, the relationships between you and your teammates, and who has Influence over you.</p>
+		</div>
+		
+		<div>
+			<h2>When our team first came together...</h2>
+			<p>Our victory secured an important resource for A.E.G.I.S. </p>
+			<label class="has-float-label">
+				<textarea rows="1" name="firstTogether" placeholder="What was it?" style="height: 50px;"></textarea>
+				<span>What was it?</span>
+			</label>
+		</div>
+
+		<h2>Relationships</h2>
+			<textarea rows="1" name="relationshipOne" class="inline" style="height: 2px;"></textarea> is crucial to the long-term success of A.E.G.I.S. I must protect them.<br>
+			<textarea rows="1" name="relationshipTwo" class="inline" style="height: 2px;"></textarea> isn’t always thrilled with the way A.E.G.I.S. handles things. I’ve come to value their critiques, even if I don’t agree with them.<br>
+		
+		<div>
+			<h2>Influence</h2>
+			<p>Respect is earned, soldier. Tell two of your teammates what they did to earn your esteem and give them Influence. Everyone else will have to match their efforts.</p>
+			<label class="has-float-label">
+				<textarea rows="1" name="influenceOver" placeholder="Who has influence over you" style="height: 50px;"></textarea>
+				<span>Who has influence over you</span>
+			</label>
+			<label class="has-float-label">
+				<textarea rows="1" name="influenceOf" placeholder="I have influence over..." style="height: 50px;"></textarea>
+				<span>I have influence over...</span>
+			</label>
+		</div>
+
+		<div class="moves">
+			<h2>Soldier Moves</h2>
+			<p>(You start with Before we get started and one more)</p>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" checked="true" value="Before we get started">
+				<label for="moveOne"> Before we get started:</label> 
+				When you have time to closely observe your opposition before a fight, roll + Savior. 
+				On a 10+, hold 3, on a 7-9, hold 2. On a miss, hold 1 and mark a condition. 
+				During the fight, you can spend your hold to name a character you observed and...:
+				<ul>
+					<li>...redirect their attack to another character or nowhere - into a wall or the sky.</li>
+					<li>...cross a distance between them and you.</li>
+					<li>...stun them, close up or from a distance.</li>
+					<li>...ignore all harm from one of their attacks.</li>
+					<li>...escape any bindings or impediments they attempt to place on you.</li>
+				</ul>
+				On a miss, you find yourself in over your head.
+				The GM will tell you why this is a bad spot.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveTwo" id="moveTwo" value="No, you move">
+				<label for="moveTwo"> No, you move:</label> 
+				When you demand that an NPC live up to a higher moral code, roll + Savior. 
+				On a hit, they have to meet your standard or mark a Condition. On a 10+, take Influence over them as well. 
+				On a miss, they reveal that the conflict in question is more complicated than it seems; give them Influence over you.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveThree" id="moveThree" value="I can do this all day">
+				<label for="moveThree"> I can do this all day:</label> 
+				When something causes you to remove yourself from a fight, you can shift Savior down (and another Label up) instead. 
+				If shifting Savior down would move it below -2, you have to leave the fight instead of shifting Labels.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFour" id="moveFour" value="It kinda feels personal">
+				<label for="moveFour"> It kinda feels personal:</label> 
+				When you discover that someone has misled you or betrayed your cause, 
+				mark a condition to take +1 ongoing against them until they are brought to justice.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFive" id="moveFive" value="Mission first">
+				<label for="moveFive"> Mission first:</label> 
+				When you secure a valuable resource by defeating a powerful foe, you can shift your Savior up and any other Label down. 
+				If you (and your team) managed to avoid causing any collateral damage, clear a condition as well.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="More than a shield">
+				<label for="moveSix"> More than a shield:</label> 
+				When you <b>directly engage a threat</b> by heading directly into danger without regard for your own safety, 
+				roll with Savior instead of Danger. On a miss, your focused attack leaves someone in grave danger; 
+				the GM will tell you what it takes to keep them safe.
+			</div>
+		</div>
+		
+		<h2>A Higher Calling</h2>
+		<p>You work for a metahuman law enforcement agency (A.E.G.I.S.) that keeps the world safe from all manner of superhuman, supernatural, and extraterrestrial threats. 
+		You volunteered to work with a team of young superheroes as part of a new A.E.G.I.S. program designed to keep Halcyon City safe.</p>
+		<p>You have an additional Label:</p>
+		<div class="labels" style="max-width: 10em;">
+		<p>Soldier <input type="number" name="charSoldier" min="-2" max="3" value="2" class="alignRight"></p>
+		</div>
+		<p>Soldier functions like any other Label. Characters with Influence over you can shift it, and you mark
+		a condition if it would ever shift above +3 or below -2. You can only cancel the influence A.E.G.I.S.
+		holds over you with the appropriate advancement. You cannot lock Soldier with a Moment of Truth.</p>
+		<p>When you’re <b>acting on orders and relying on your training</b>, give A.E.G.I.S. influence to use Soldier
+		instead of any other Label when you make a basic or playbook move.</p>
+		<p>When you <b>invoke your authority over civilians, Halcyon City personnel, or A.E.G.I.S. staff</b>, roll + Soldier.
+		On a hit, your words carry weight. On a 7-9, someone will push back against your instructions or orders...sooner rather than later. 
+		On a miss, your attempts to control the situation create an opportunity for your enemies within A.E.G.I.S. to act against you.</p>
+		<p>When you <b>ask A.E.G.I.S. for additional resources, equipment, or information during a mission</b>, roll + Soldier. 
+		On a hit, they’ll resupply you as best they can. On a 10+, the resources are highly classified or experimental; 
+		take +1 ongoing to deploying them throughout the mission. On a miss, A.E.G.I.S. sends what they think you need, regardless of what you actually requested.</p>
+
+		<div>
+			<h2>Moment of Truth</h2>
+			<p>Freedom isn’t free. But not every mission ends in tragedy. When things look bleakest, when your back is against the wall, when it seems like the dawn will never come...you find a way forward without violence. Your enemies lay down their arms and surrender; your allies step back from the brink of chaos. Of course, the people you’ve saved aren’t going to forget what you’ve done here today; they may even come to see you as a symbol of the higher cause you claim to serve...</p>
+			<label for="truthUnlockOne"> Unlock 1:</label> <input type="checkbox" name="truthUnlockOne" id="truthUnlockOne"><label for="truthUsedOne"> Use 1:</label> <input type="checkbox" name="truthUsedOne" id="truthUsedOne">
+			<label for="truthUnlockTwo"> Unlock 2:</label> <input type="checkbox" name="truthUnlockTwo" id="truthUnlockTwo"><label for="truthUsedTwo"> Use 2:</label> <input type="checkbox" name="truthUsedTwo" id="truthUsedTwo">
+		</div>
+
+		<div>
+			<h2>Team Moves</h2>
+			<p>When you <b>share a triumphant celebration with someone</b>, tell them what they need to do to achieve their full potential. If they accept your advice, take Influence over them and add two Team to the pool. If they reject what you have to say, mark a condition.</p>
+			<p>When you <b>share a vulnerability or weakness with someone</b>, ask them what cause they serve. If you find it to be a worthy cause, tell them how you will fight for it, clear a condition, and add a Team to the pool. If they don’t have a cause (or you find it unworthy), mark a condition.</p>
+		</div>
+
+		<div>
+			<h2>Potential</h2>
+			<div>
+				<input type="checkbox" name="potentialOne" id="potentialOne">
+				<input type="checkbox" name="potentialTwo" id="potentialTwo">
+				<input type="checkbox" name="potentialThree" id="potentialThree">
+				<input type="checkbox" name="potentialFour" id="potentialFour">
+				<input type="checkbox" name="potentialFive" id="potentialFive"> 
+			</div>
+		</div>
+
+		<div>
+			<h2>Advancement</h2>
+			<p>When you fill your potential track, you advance. Choose from the list below.</p>
+			<input type="checkbox" name="advanceOne" id="advanceOne"> Take another move from your playbook<br>
+			<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another move from your playbook<br>
+			<input type="checkbox" name="advanceThree" id="advanceThree"> Take another move from your playbook<br>
+			<input type="checkbox" name="advanceFour" id="advanceFour"> Take a move from another playbook<br>
+			<input type="checkbox" name="advanceFive" id="advanceFive"> Unlock your Moment of Truth<br>
+			<input type="checkbox" name="advanceSix" id="advanceSix"> Someone permanently loses Influence over you; add +1 to a Label<br>
+			<input type="checkbox" name="advanceSeven" id="advanceSeven"> Rearrange your Labels as you choose, and add +1 to a Label<br>
+			<input type="checkbox" name="advanceEight" id="advanceEight"> Undergo enhancement: take two new abilities<br>
+			<p>When you’ve taken five advances from the top list, you can take advances from the list below.</p>
+			<input type="checkbox" name="advanceNine" id="advanceNine"> Lock Soldier, and add +1 to a Label of your choice<br>
+			<input type="checkbox" name="advanceTen" id="advanceTen"> Take a Mentor and any move from the Protégé playbook<br>
+			<input type="checkbox" name="advanceEleven" id="advanceEleven"> A.E.G.I.S. permanently loses Inﬂuence over you; change playbooks<br>
+			<input type="checkbox" name="advanceTwelve" id="advanceTwelve"> Take an adult move<br>
+			<input type="checkbox" name="advanceThirteen" id="advanceThirteen"> Take an adult move<br>
+			<input type="checkbox" name="advanceFourteen" id="advanceFourteen"> Retire from A.E.G.I.S. to a civilian life or join the upper echelons of A.E.G.I.S. as a Senior Director<br>
+		</div>
+
+		<h2>Other Moves</h2>
+			<textarea rows="8" name="otherMoves" style="width: 100%; height: 153px;"></textarea>
+	</form>
+</body>
+</html>
